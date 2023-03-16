@@ -11,8 +11,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;       
+        width: 100%;
+        overflow: hidden;       
     }
+
+   
 
     .center{
             border: 2px solid white;
@@ -25,7 +28,6 @@
     .letter_0, .letter_5, .letter_9 {    
         position: relative;
         top: -100vh;
-        left: 50%;
         animation: letter_top_animation 9s cubic-bezier(0.4, 0, 1, 1) infinite  ;
         
     }
@@ -86,102 +88,70 @@
     @keyframes letter_top_animation {
         0% {
             top: -100vh;
-            opacity: 0;
         }
         25% {
-            left: 50%;
             top: 0;
-            opacity: 1;
         }
         50% {
-            left: 0%;
             top: 0;
-            opacity: 1;
         }
         75% {
-            left: 0%;
             top: 0;
-            opacity: 1;
         }
         100% {
-            opacity: 1;
-            left: 0;
             top: -100vh;
         }
     }
     @keyframes letter_right_animation {
         0% {
-            left: 100%;
-            opacity:0;
+            left: 300%;
         }
         25% {
-            left: 50%;
-            opacity: 0;
+            left: 0%;
         }
         50% {
             left: 0%;
-            opacity: 1;
-        }
-        65% {
-            left: 0%;
-            opacity: 1;
         }
         75% {
-            left: 50%;
-            opacity: 0;
-        }
+            left: 0%;
+        }     
         100% {
-            opacity: 0;
-            left: 100%;
+            left: 300%;
         }
     }
     @keyframes letter_bottom_animation {
         0% {
             top: 100vh;
-            opacity:0;
         }
         25% {
-            right: 0%;
-            opacity: 1;
             top: 0;
         }
         50% {
             top: 0;
-            right: 0;
-            opacity: 1;
         }
         75% {
             top: 0;
-            opacity: 1;
         }
        
         100% {
             top: 100vh;
-            right: 0;
-            opacity: 1;
         }
     }
     @keyframes letter_left_animation {
         0% {
-            left: -100%;
-            opacity:0;
+            left: -250%;
         }
         25% {
-            left: -45%;
-            opacity: 0;
+            left: 0;
         }
         50% {
             left: 0;
-            opacity: 1;
         }
         75% {
             left: 0%;
-            opacity: 1;
-        }
-       
+        }       
         100% {
-            left: -100%;
-            opacity: 1;
+            left: -300%;
         }
     }
 
