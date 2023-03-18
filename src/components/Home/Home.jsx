@@ -3,7 +3,7 @@ import './Home.scss'
 function Home() {
     const title = "In Construction"
     const titleArray = title.split(/(?!^)/u)
-    console.log("titleArray", titleArray);
+    console.log("titleArray = ", titleArray);
  
   return (
     <div className="home">
