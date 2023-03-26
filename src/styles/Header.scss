@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 2em;
+    background-color: #5c5470;
+
+    .header_logo {
+        .logo {
+            height: 5em;
+        }
+    }
+
+    .header_link {
+        display: flex;
+        flex-direction: row;
+        gap: 10em;
+        align-items: center;
+        font-size: 1.2em;
+        padding: 0 2em;
+        margin: 0 auto;
+    }
+}
