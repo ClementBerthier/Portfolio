@@ -1,0 +1,44 @@
+@use "../styles/vars" as vars; // import des variables css
+
+.home {
+    background-color: vars.$background-color-home;
+    height: 94vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: vars.$font-familly-home;
+
+    .home_title {
+        font-size: 5rem;
+        font-weight: 700;
+        color: vars.$color-home-text;
+        margin-bottom: 1rem;
+    }
+    .home_subtitle {
+        font-size: 4em;
+        font-weight: 400;
+        color: vars.$color-home-text;
+        margin-bottom: 1rem;
+    }
+    .home_description {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: vars.$color-home-text;
+        margin-bottom: 1rem;
+    }
+    .home_button {
+        background-color: vars.$color-home-button;
+        color: vars.$color-home-button-text;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: vars.$color-home-button-hover;
+        }
+    }
+}

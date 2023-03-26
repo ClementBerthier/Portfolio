@@ -1,12 +1,15 @@
+@use "../styles/vars" as vars; // import des variables css
+
 .header {
     display: flex;
     flex-direction: row;
-    margin: 1em 2em;
-    background-color: #5c5470;
+    background-color: vars.$background-color-header;
+    height: 6vh;
 
     .header_logo {
         .logo {
             height: 5em;
+            margin: 0 2em;
         }
     }
 
@@ -18,5 +21,11 @@
         font-size: 1.2em;
         padding: 0 2em;
         margin: 0 auto;
+
+        .link {
+            font-size: 1.3em;
+            font-family: vars.$font-familly-header;
+            color: vars.$color-header-link;
+        }
     }
 }
