@@ -9,25 +9,25 @@
     flex-direction: column;
     font-family: vars.$font-familly-home;
 
-    .home_title {
+    .title {
         font-size: 5rem;
         font-weight: 700;
         color: vars.$color-home-text;
         margin-bottom: 1rem;
     }
-    .home_subtitle {
+    .subtitle {
         font-size: 4em;
         font-weight: 400;
         color: vars.$color-home-text;
         margin-bottom: 1rem;
     }
-    .home_description {
+    .description {
         font-size: 1.5rem;
         font-weight: 400;
         color: vars.$color-home-text;
         margin-bottom: 1rem;
     }
-    .home_button {
+    .button {
         background-color: vars.$color-home-button;
         color: vars.$color-home-button-text;
         padding: 1rem 2rem;
@@ -37,6 +37,7 @@
         font-weight: 400;
         cursor: pointer;
         transition: all 0.3s ease;
+
         &:hover {
             background-color: vars.$color-home-button-hover;
         }

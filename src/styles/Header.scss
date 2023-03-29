@@ -6,14 +6,14 @@
     background-color: vars.$background-color-header;
     height: 6vh;
 
-    .header_logo {
+    .logo-container {
         .logo {
             height: 5em;
             margin: 0 2em;
         }
     }
 
-    .header_link {
+    .link-container {
         display: flex;
         flex-direction: row;
         gap: 10em;

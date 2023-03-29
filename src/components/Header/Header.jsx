@@ -3,10 +3,10 @@ import "../../styles/Header.scss";
 function Header() {
     return (
         <div className="header">
-            <div className="header_logo">
-                <img className="logo" src="/image/logo-test.jpg" alt="logo" />
+            <div className="logo-container">
+                <img className="logo" src="/images/logo-test.jpg" alt="logo" />
             </div>
-            <div className="header_link">
+            <div className="link-container">
                 <a className="link" href="#home">
                     Accueil
                 </a>
