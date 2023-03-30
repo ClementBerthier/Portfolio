@@ -7,7 +7,7 @@ const data = [
     },
     {
         date: "2011 - 2013",
-        description: "Formation technicien de maintenance aeronautique",
+        description: "Formation Technicien de maintenance aeronautique",
         school: "École de formation des sous-officiers de l'Armée de l'Air",
         place: "Rochefort (17)",
     },

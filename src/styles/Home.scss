@@ -10,30 +10,30 @@
     font-family: vars.$font-familly-home;
 
     .title {
-        font-size: 5rem;
+        font-size: 5em;
         font-weight: 700;
         color: vars.$color-home-text;
-        margin-bottom: 1rem;
+        margin-bottom: 1vw;
     }
     .subtitle {
         font-size: 4em;
         font-weight: 400;
         color: vars.$color-home-text;
-        margin-bottom: 1rem;
+        margin-bottom: 1vw;
     }
     .description {
-        font-size: 1.5rem;
+        font-size: 1.5em;
         font-weight: 400;
         color: vars.$color-home-text;
-        margin-bottom: 1rem;
+        margin-bottom: 1vw;
     }
     .button {
         background-color: vars.$color-home-button;
         color: vars.$color-home-button-text;
-        padding: 1rem 2rem;
+        padding: 1vw 2vh;
         border: none;
         border-radius: 5px;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         font-weight: 400;
         cursor: pointer;
         transition: all 0.3s ease;

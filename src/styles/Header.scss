@@ -8,23 +8,23 @@
 
     .logo-container {
         .logo {
-            height: 5em;
-            margin: 0 2em;
+            height: 5vh;
+            margin: 0 2vw;
         }
     }
 
     .link-container {
         display: flex;
         flex-direction: row;
-        gap: 10em;
+        gap: 5vw;
         align-items: center;
         font-size: 1.2em;
-        padding: 0 2em;
+        padding: 0 2vw;
         margin: 0 auto;
 
         .link {
             font-size: 1.3em;
-            font-family: vars.$font-familly-header;
+            font-family: vars.$font-family-header;
             color: vars.$color-header-link;
         }
     }
