@@ -1,0 +1,32 @@
+.projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title {
+        text-align: center;
+        margin-top: 5%;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 2vh;
+    }
+    .grid-container {
+        display: grid;
+        width: 50%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+        margin: 0 auto;
+    }
+    .grid-item {
+        .project-link {
+            .project-image {
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

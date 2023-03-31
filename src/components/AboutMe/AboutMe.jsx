@@ -53,68 +53,58 @@ export const AboutMe = () => {
             <div className="timeline">
                 <h1 className="title">Mon Parcours</h1>
                 <div className="content">
-                    {dataTimeline.map((data, index) => {
-                        return (
-                            <div className="box" key={index}>
-                                <p className="description">
-                                    {data.description}
-                                </p>
-                                <p className="school">{data.school}</p>
-                                <p className="place">{data.place}</p>
-                            </div>
-                        );
-                    })}
+                    {dataTimeline.map((data, index) => (
+                        <div className="box" key={index}>
+                            <p className="description">{data.description}</p>
+                            <p className="school">{data.school}</p>
+                            <p className="place">{data.place}</p>
+                        </div>
+                    ))}
                 </div>
                 <div className="line"></div>
 
                 <div className="years">
-                    {dataTimeline.map((data, index) => {
-                        return (
-                            <div className="box-container">
-                                <div className="box" key={index}>
-                                    <p>{data.date}</p>
-                                </div>
+                    {dataTimeline.map((data, index) => (
+                        <div className="box-container">
+                            <div className="box" key={index}>
+                                <p>{data.date}</p>
                             </div>
-                        );
-                    })}
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="skills">
                 <h1 className="title">Mes Compétences</h1>
                 <div className="skills-box">
-                    {skillsSection.map((section) => {
-                        return (
-                            <div className={section.name.toLowerCase()}>
-                                <h2 className="title">{section.name}</h2>
-                                <div className="logo-box">
-                                    {section.variable.map((logo, index) => {
-                                        return (
-                                            <a
-                                                className="logo-link"
-                                                href={logo.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                key={index}
-                                            >
-                                                <Popup
-                                                    className="popup"
-                                                    trigger={
-                                                        <img
-                                                            className="logo"
-                                                            src={logo.path}
-                                                            alt={logo.name}
-                                                        />
-                                                    }
-                                                    content={logo.name}
-                                                    size="huge"
+                    {skillsSection.map((section) => (
+                        <div className={section.name.toLowerCase()}>
+                            <h2 className="title">{section.name}</h2>
+                            <div className="logo-box">
+                                {section.variable.map((logo, index) => (
+                                    <a
+                                        className="logo-link"
+                                        href={logo.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        key={index}
+                                    >
+                                        <Popup
+                                            className="popup"
+                                            trigger={
+                                                <img
+                                                    className="logo"
+                                                    src={logo.path}
+                                                    alt={logo.name}
                                                 />
-                                            </a>
-                                        );
-                                    })}
-                                </div>
+                                            }
+                                            content={logo.name}
+                                            size="huge"
+                                        />
+                                    </a>
+                                ))}
                             </div>
-                        );
-                    })}
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
