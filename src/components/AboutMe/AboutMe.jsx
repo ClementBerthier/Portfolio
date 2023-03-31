@@ -1,13 +1,28 @@
 import { useState } from "react";
 import { data } from "../../assets/data/data";
-import { logoSkillsFront } from "../../assets/data/logoSkillsFront.js";
-import { logoSkillsBack } from "../../assets/data/logoSkillsBack.js";
+import { logoSkillsFrontend } from "../../assets/data/logoSkillsFrontend.js";
+import { logoSkillsBackend } from "../../assets/data/logoSkillsBackend.js";
 import { logoSkillsOther } from "../../assets/data/logoSkillsOther.js";
+import "semantic-ui-css/semantic.min.css";
 import "../../styles/AboutMe.scss";
+import { Popup } from "semantic-ui-react";
 
 export const AboutMe = () => {
     const [dataTimeline, setDataTimeline] = useState(data);
-    const skillsSection = ["Frontend", "Backend", "Other"];
+    const skillsSection = [
+        {
+            name: "Frontend",
+            variable: logoSkillsFrontend,
+        },
+        {
+            name: "Backend",
+            variable: logoSkillsBackend,
+        },
+        {
+            name: "Autres",
+            variable: logoSkillsOther,
+        },
+    ];
 
     return (
         <div className="aboutMe" id="aboutMe">
@@ -67,69 +82,39 @@ export const AboutMe = () => {
             <div className="skills">
                 <h1 className="title">Mes Compétences</h1>
                 <div className="skills-box">
-                    <div className="frontend">
-                        <h2 className="title">Frontend</h2>
-                        <div className="logo-box">
-                            {logoSkillsFront.map((logo, index) => {
-                                return (
-                                    <a
-                                        href={logo.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img
-                                            className="logo"
-                                            src={logo.path}
-                                            alt={logo.name}
-                                            key={index}
-                                        />
-                                    </a>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div className="backend">
-                        <h2 className="title">Backend</h2>
-                        <div className="logo-box">
-                            {logoSkillsBack.map((logo, index) => {
-                                return (
-                                    <a
-                                        href={logo.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img
-                                            className="logo"
-                                            src={logo.path}
-                                            alt={logo.name}
-                                            key={index}
-                                        />
-                                    </a>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div className="other">
-                        <h2 className="title">Outils</h2>
-                        <div className="logo-box">
-                            {logoSkillsOther.map((logo, index) => {
-                                return (
-                                    <a
-                                        href={logo.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img
-                                            className="logo"
-                                            src={logo.path}
-                                            alt={logo.name}
-                                            key={index}
-                                        />
-                                    </a>
-                                );
-                            })}
-                        </div>
-                    </div>
+                    {skillsSection.map((section) => {
+                        return (
+                            <div className={section.name.toLowerCase()}>
+                                <h2 className="title">{section.name}</h2>
+                                <div className="logo-box">
+                                    {section.variable.map((logo, index) => {
+                                        return (
+                                            <a
+                                                className="logo-link"
+                                                href={logo.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                key={index}
+                                            >
+                                                <Popup
+                                                    className="popup"
+                                                    trigger={
+                                                        <img
+                                                            className="logo"
+                                                            src={logo.path}
+                                                            alt={logo.name}
+                                                        />
+                                                    }
+                                                    content={logo.name}
+                                                    size="huge"
+                                                />
+                                            </a>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
