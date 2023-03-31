@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         date: "2009 - 2011",
         description: "Baccalauréat STI Génie Électronique",
@@ -24,5 +24,3 @@ const data = [
         place: "Téleprésentiel & ???",
     },
 ];
-
-export default data;

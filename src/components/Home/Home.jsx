@@ -1,6 +1,6 @@
 import "../../styles/Home.scss";
 
-function Home() {
+export const Home = () => {
     return (
         <div className="home" id="home">
             <h1 className="title">Bienvenue sur mon Portfolio</h1>
@@ -11,6 +11,4 @@ function Home() {
             <button className="button">en savoir +</button>
         </div>
     );
-}
-
-export default Home;
+};

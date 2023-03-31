@@ -144,6 +144,17 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+
+            .frontend,
+            .backend,
+            .other {
+                .logo-box {
+                    .logo {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
         }
 
         .skills-box > * {
