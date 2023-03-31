@@ -40,6 +40,7 @@ export const Projects = () => {
                                 id={index}
                                 overlay={project.description}
                             />
+                            {/*//TODO: Fixer le probleme de l'image 4 qui affiche le hover de l'image 0*/}
                             {hovered && hoveredId == index ? (
                                 <p className="image-text active">
                                     {project.description}
