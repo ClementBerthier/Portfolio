@@ -2,36 +2,39 @@ export const projects = [
     {
         name: "Node.js",
         path: "/images/projects/space4.png",
-        url: "https://nodejs.org/en", //TODO: mettre les vrais urls des projets
+        url: "https://nodejs.org/en",
+        description: "Moi en général je repond merde, ca va avec tout",
+        //TODO: mettre les vrais urls des projets
     },
     {
         name: "Node.js",
         path: "/images/projects/space2.png",
         url: "https://nodejs.org/en",
-        description: "Moi en général je repond merde, ca va avec tout",
+        description: "Le caca des pigeon c'est caca",
     },
     {
         name: "Node.js",
         path: "/images/projects/space3.png",
         url: "https://nodejs.org/en",
-        description: "Moi en général je repond merde, ca va avec tout",
+        description:
+            "pour savoir si il va y avoir du vent il faut mettre son doight dans le cul du coq",
     },
     {
         name: "Node.js",
         path: "/images/projects/space3.png",
         url: "https://nodejs.org/en",
-        description: "Moi en général je repond merde, ca va avec tout",
+        description: "tantan elle fait des flan",
     },
     {
         name: "Node.js",
         path: "/images/projects/space3.png",
         url: "https://nodejs.org/en",
-        description: "Moi en général je repond merde, ca va avec tout",
+        description: "LE PETIT POOOOOIIIIIISSSSSSSOOOOOONNNN",
     },
     {
         name: "Node.js",
         path: "/images/projects/space3.png",
         url: "https://nodejs.org/en",
-        description: "Moi en général je repond merde, ca va avec tout",
+        description: "Parfois on a pas le choix, faut sacrifier les jeunes",
     },
 ];

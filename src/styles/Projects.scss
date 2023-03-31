@@ -20,12 +20,29 @@
     }
     .grid-item {
         .project-link {
+            position: relative;
             .project-image {
                 height: 100%;
                 width: 100%;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+            }
+            .image-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+                opacity: 0;
+                text-shadow: 2px 2px #000000;
+            }
+
+            .active {
+                opacity: 1;
             }
         }
     }

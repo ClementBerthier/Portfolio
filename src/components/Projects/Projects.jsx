@@ -4,13 +4,18 @@ import "../../styles/Projects.scss";
 
 export const Projects = () => {
     const [hovered, setHovered] = useState(false);
+    const [hoveredId, setHoveredId] = useState(null);
 
-    const handleMouseEnter = () => {
+    const handleMouseEnter = (event) => {
+        const idProject = event.target.id;
         setHovered(true);
+        setHoveredId(idProject);
     };
+    console.log("hover", hoveredId);
 
     const handleMouseLeave = () => {
         setHovered(false);
+        setHoveredId(null);
     };
 
     return (
@@ -25,14 +30,25 @@ export const Projects = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             key={index}
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
                         >
                             <img
                                 className="project-image"
                                 src={project.path}
                                 alt={project.name}
-                                onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
+                                id={index}
+                                overlay={project.description}
                             />
+                            {hovered && hoveredId == index ? (
+                                <p className="image-text active">
+                                    {project.description}
+                                </p>
+                            ) : (
+                                <p className="image-text ">
+                                    {project.description}
+                                </p>
+                            )}
                         </a>
                     </div>
                 ))}
