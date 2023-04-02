@@ -16,14 +16,13 @@ export const Header = () => {
                 <a className="link" href="#project">
                     Projets
                 </a>
-                <a className="link" href="#game">
+                {/* <a className="link" href="#game">
                     Game
-                </a>
+                </a> */}
                 <a className="link" href="#contact">
                     Contact
                 </a>
             </div>
         </div>
     );
-}
-
+};

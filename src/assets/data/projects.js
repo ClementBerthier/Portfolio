@@ -34,7 +34,7 @@ export const projects = [
         name: "Node.js",
         path: "/images/projects/space3.png",
         url: "https://nodejs.org/en",
-        description: "LE PETIT POOOOOIIIIIISSSSSSSOOOOOONNNN",
+        description: "LE PETIT POOOIIISSSOOOOOONNN",
     },
     {
         id: 6,

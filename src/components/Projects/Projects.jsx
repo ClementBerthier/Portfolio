@@ -54,6 +54,9 @@ export const Projects = () => {
                     </div>
                 ))}
             </div>
+            <div className="button-container">
+                <button className="button">En voir plus</button>
+            </div>
         </div>
     );
 };
