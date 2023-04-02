@@ -26,7 +26,7 @@ export const AboutMe = () => {
     ];
 
     return (
-        <div className="aboutMe" id="aboutMe">
+        <section className="aboutMe" id="aboutMe">
             <div className="presentation">
                 <div className="img-container">
                     <img
@@ -67,8 +67,8 @@ export const AboutMe = () => {
 
                 <div className="years">
                     {data.map((data) => (
-                        <div className="box-container">
-                            <div className="box" key={data.id}>
+                        <div className="box-container" key={data.id}>
+                            <div className="box">
                                 <p>{data.date}</p>
                             </div>
                         </div>
@@ -112,6 +112,6 @@ export const AboutMe = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

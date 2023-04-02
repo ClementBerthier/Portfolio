@@ -11,7 +11,6 @@ export const Projects = () => {
         setHovered(true);
         setHoveredId(idProject);
     };
-    console.log(typeof hoveredId);
 
     const handleMouseLeave = () => {
         setHovered(false);
@@ -19,17 +18,16 @@ export const Projects = () => {
     };
 
     return (
-        <div className="projects" id="projects">
+        <section className="projects" id="projects">
             <h1 className="title">Mes Derniers Projets</h1>
             <div className="grid-container">
-                {projects.map((project, index) => (
-                    <div className="grid-item">
+                {projects.map((project) => (
+                    <div className="grid-item" key={project.id}>
                         <a
                             className="project-link"
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            key={project.id}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
@@ -42,11 +40,14 @@ export const Projects = () => {
                                 onMouseEnter={handleMouseEnter}
                             />
                             {hovered && Number(hoveredId) === project.id ? (
-                                <p className="image-text active">
+                                <p
+                                    className="image-text active"
+                                    key={project.id}
+                                >
                                     {project.description}
                                 </p>
                             ) : (
-                                <p className="image-text ">
+                                <p className="image-text" key={project.id}>
                                     {project.description}
                                 </p>
                             )}
@@ -57,6 +58,6 @@ export const Projects = () => {
             <div className="button-container">
                 <button className="button">En voir plus</button>
             </div>
-        </div>
+        </section>
     );
 };

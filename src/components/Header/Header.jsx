@@ -2,7 +2,7 @@ import "../../styles/Header.scss";
 
 export const Header = () => {
     return (
-        <div className="header">
+        <header className="header">
             <div className="logo-container">
                 <img className="logo" src="/images/logo-test.jpg" alt="logo" />
             </div>
@@ -23,6 +23,6 @@ export const Header = () => {
                     Contact
                 </a>
             </div>
-        </div>
+        </header>
     );
 };
