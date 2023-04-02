@@ -39,8 +39,8 @@ export const Projects = () => {
                                 alt={project.name}
                                 overlay={project.description}
                                 id={project.id}
+                                onMouseEnter={handleMouseEnter}
                             />
-                            {/*//TODO: Fixer le probleme de l'image 4 qui affiche le hover de l'image 0*/}
                             {hovered && Number(hoveredId) === project.id ? (
                                 <p className="image-text active">
                                     {project.description}
