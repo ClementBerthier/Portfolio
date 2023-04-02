@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { data } from "../../assets/data/data";
 import { logoSkillsFrontend } from "../../assets/data/logoSkillsFrontend.js";
 import { logoSkillsBackend } from "../../assets/data/logoSkillsBackend.js";
@@ -8,17 +7,19 @@ import "../../styles/AboutMe.scss";
 import { Popup } from "semantic-ui-react";
 
 export const AboutMe = () => {
-    const [dataTimeline, setDataTimeline] = useState(data);
     const skillsSection = [
         {
+            id: 1,
             name: "Frontend",
             variable: logoSkillsFrontend,
         },
         {
+            id: 2,
             name: "Backend",
             variable: logoSkillsBackend,
         },
         {
+            id: 3,
             name: "Autres",
             variable: logoSkillsOther,
         },
@@ -27,11 +28,11 @@ export const AboutMe = () => {
     return (
         <div className="aboutMe" id="aboutMe">
             <div className="presentation">
-                <div className="picture-container">
+                <div className="img-container">
                     <img
-                        className="picture"
+                        className="portrait"
                         src="./images/portrait.png"
-                        alt="Portait picture"
+                        alt="Portrait"
                     />
                 </div>
                 <div className="description">
@@ -46,15 +47,16 @@ export const AboutMe = () => {
                         Si vous cherchez quelqu'un d'enthousiaste et toujours
                         prêt à relever de nouveaux défis, je serais ravi de
                         pouvoir échanger avec vous et vous rencontrer. N'hésitez
-                        pas à me <a href="">contacter</a>
+                        pas à me <a href="/">contacter</a>{" "}
+                        {/* //TODO mettre le vrai lien  */}
                     </p>
                 </div>
             </div>
             <div className="timeline">
                 <h1 className="title">Mon Parcours</h1>
                 <div className="content">
-                    {dataTimeline.map((data, index) => (
-                        <div className="box" key={index}>
+                    {data.map((data) => (
+                        <div className="box" key={data.id}>
                             <p className="description">{data.description}</p>
                             <p className="school">{data.school}</p>
                             <p className="place">{data.place}</p>
@@ -64,9 +66,9 @@ export const AboutMe = () => {
                 <div className="line"></div>
 
                 <div className="years">
-                    {dataTimeline.map((data, index) => (
+                    {data.map((data) => (
                         <div className="box-container">
-                            <div className="box" key={index}>
+                            <div className="box" key={data.id}>
                                 <p>{data.date}</p>
                             </div>
                         </div>
@@ -77,16 +79,19 @@ export const AboutMe = () => {
                 <h1 className="title">Mes Compétences</h1>
                 <div className="skills-box">
                     {skillsSection.map((section) => (
-                        <div className={section.name.toLowerCase()}>
+                        <div
+                            className={section.name.toLowerCase()}
+                            key={section.id}
+                        >
                             <h2 className="title">{section.name}</h2>
                             <div className="logo-box">
-                                {section.variable.map((logo, index) => (
+                                {section.variable.map((logo) => (
                                     <a
                                         className="logo-link"
                                         href={logo.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        key={index}
+                                        key={logo.id}
                                     >
                                         <Popup
                                             className="popup"

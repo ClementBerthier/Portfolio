@@ -11,7 +11,7 @@ export const Projects = () => {
         setHovered(true);
         setHoveredId(idProject);
     };
-    console.log("hover", hoveredId);
+    console.log(typeof hoveredId);
 
     const handleMouseLeave = () => {
         setHovered(false);
@@ -29,7 +29,7 @@ export const Projects = () => {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            key={index}
+                            key={project.id}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
@@ -37,11 +37,11 @@ export const Projects = () => {
                                 className="project-image"
                                 src={project.path}
                                 alt={project.name}
-                                id={index}
                                 overlay={project.description}
+                                id={project.id}
                             />
                             {/*//TODO: Fixer le probleme de l'image 4 qui affiche le hover de l'image 0*/}
-                            {hovered && hoveredId == index ? (
+                            {hovered && Number(hoveredId) === project.id ? (
                                 <p className="image-text active">
                                     {project.description}
                                 </p>
