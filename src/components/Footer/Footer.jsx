@@ -10,7 +10,12 @@ export const Footer = () => {
                     <div className="link">
                         <div className="logo-container">
                             {logoFooter.map((logo) => (
-                                <a href={logo.url} key={logo.id}>
+                                <a
+                                    href={logo.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    key={logo.id}
+                                >
                                     <img
                                         src={logo.path}
                                         alt={logo.name}
