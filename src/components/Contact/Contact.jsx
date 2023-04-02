@@ -8,12 +8,23 @@ export const Contact = () => {
         message: "",
     });
 
+    const emailValidation = (email) => {
+        const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+        return regex.test(email);
+    };
+
+    // TODO: Mettre en place le captcha une fois le site en ligne (recatpcha google)
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if (!emailValidation(formState.email)) {
+            alert("Veuillez entrer une adresse email valide.");
+            return;
+        }
         //TODO: faire le code d'envoie des donné a mon adresse email
         console.log(
             "Nom:",
-            formState.email,
+            formState.name,
             "Email:",
             formState.email,
             "Message:",
