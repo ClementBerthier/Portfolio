@@ -13,7 +13,7 @@ export const Header = () => {
                 <a className="link" href="#aboutMe">
                     A Propos
                 </a>
-                <a className="link" href="#project">
+                <a className="link" href="#projects">
                     Projets
                 </a>
                 {/* <a className="link" href="#game">
