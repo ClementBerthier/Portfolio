@@ -1,15 +1,19 @@
 @use "../styles/vars" as vars; // import des variables css
 
 .header {
+    position: relative;
     display: flex;
     flex-direction: row;
     background-color: vars.$background-color-header;
     height: 6vh;
+    animation: slide-down 1s ease-in-out;
 
     .logo-container {
         .logo {
-            height: 5vh;
+            height: 6vh;
             margin: 0 2vw;
+            opacity: 0;
+            animation: appear 0.7s ease-in-out 1s forwards;
         }
     }
 
@@ -21,6 +25,8 @@
         font-size: 1.4em;
         padding: 0 2vw;
         margin: 0 auto;
+        opacity: 0;
+        animation: slide-left 0.7s ease-in-out 1s forwards;
 
         .link {
             font-size: 1.3em;
@@ -28,4 +34,8 @@
             color: vars.$color-header-link;
         }
     }
+}
+
+.hidden {
+    display: none;
 }

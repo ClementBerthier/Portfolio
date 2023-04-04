@@ -173,14 +173,3 @@
         }
     }
 }
-
-@keyframes slide-right {
-    0% {
-        left: 0;
-        border-left-width: 5px;
-    }
-    100% {
-        left: 100%;
-        border-left-width: 100%;
-    }
-}
