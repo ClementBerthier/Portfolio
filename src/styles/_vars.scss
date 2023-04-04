@@ -10,6 +10,7 @@ $background-color-header: #acacac;
 $color-header-link: #000;
 $font-family-header: Merriweather, serif;
 $aniamtion-appear-header: appear 0.7s ease-in-out 1s forwards;
+$animation-font-size-up-header: font-size-up-header 0.3s ease-in-out forwards;
 
 /*----------------HOME----------------*/
 $background-color-home: #fff;
@@ -20,7 +21,7 @@ $color-home-button-hover: #f4dfd0;
 $font-familly-home: MontSerrat, serif;
 $font-familly-home-trigger: Dancing Script, serif;
 $animation-appear-home: appear 0.7s ease-in-out 1s forwards;
+$animation-size-up-home: size-up 0.7s ease-in-out 0.2s forwards;
 $animation-slide-right-home: slide-right 0.7s ease-in-out 1s forwards;
 $animation-slide-left-home: slide-left 0.7s ease-in-out 1s forwards;
-$animation-size-up-home: size-up 0.7s ease-in-out 0.2s forwards;
 $animation-font-size-up-home: font-size-up 0.3s ease-in-out forwards;

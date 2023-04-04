@@ -34,7 +34,7 @@
         align-items: center;
         flex-direction: column;
         .title {
-            font-size: 5em;
+            font-size: 10em;
             font-weight: 700;
             color: vars.$color-home-text;
             margin-bottom: 1vw;
@@ -43,7 +43,7 @@
             animation: vars.$animation-slide-left-home;
         }
         .subtitle {
-            font-size: 4em;
+            font-size: 8em;
             font-weight: 400;
             color: vars.$color-home-text;
             margin-bottom: 1vw;
@@ -52,7 +52,7 @@
             animation: vars.$animation-slide-right-home;
         }
         .description {
-            font-size: 1.5em;
+            font-size: 3.6em;
             font-weight: 400;
             color: vars.$color-home-text;
             margin-bottom: 1vw;
@@ -61,17 +61,15 @@
             animation: vars.$animation-slide-right-home;
         }
         .button {
-            background-color: vars.$color-home-button;
             color: vars.$color-home-button-text;
-            padding: 1vw 2vh;
+            padding: 0.5vw 2vh;
             border: none;
             border-radius: 5px;
-            font-size: 1.5em;
+            font-size: 3.6em;
             font-weight: 400;
             cursor: pointer;
             transition: all 0.3s ease;
             opacity: 0;
-
             animation: vars.$animation-slide-right-home;
 
             &:hover {

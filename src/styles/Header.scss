@@ -4,27 +4,28 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     background-color: vars.$background-color-header;
     height: 6vh;
+    gap: 10vw;
     animation: slide-down 1s ease-in-out;
 
     .logo-container {
         .logo {
             height: 6vh;
-            margin: 0 2vw;
             opacity: 0;
             animation: appear 0.7s ease-in-out 1s forwards;
         }
     }
 
     .link-container {
+        position: relative;
         display: flex;
         flex-direction: row;
-        gap: 10vw;
         align-items: center;
+        gap: 10vw;
         font-size: 1.4em;
         padding: 0 2vw;
-        margin: 0 auto;
         opacity: 0;
         animation: slide-left 0.7s ease-in-out 1s forwards;
 
@@ -32,6 +33,13 @@
             font-size: 1.3em;
             font-family: vars.$font-family-header;
             color: vars.$color-header-link;
+            padding: 1em 0;
+            transition: transform 0.3s ease-in-out;
+        }
+        .link:hover {
+            cursor: pointer;
+            color: #fff;
+            transform: scale(1.5);
         }
     }
 }

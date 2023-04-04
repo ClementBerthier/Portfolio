@@ -16,6 +16,15 @@
     }
 }
 
+@keyframes font-size-up-header {
+    0% {
+        font-size: 1.3em;
+    }
+    100% {
+        font-size: 2em;
+    }
+}
+
 @keyframes size-up {
     0% {
         transform: scale(0);
