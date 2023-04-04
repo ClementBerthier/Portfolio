@@ -34,6 +34,7 @@
         align-items: center;
         flex-direction: column;
         .title {
+            display: inline-block;
             font-size: 10em;
             font-weight: 700;
             color: vars.$color-home-text;
@@ -43,6 +44,7 @@
             animation: vars.$animation-slide-left-home;
         }
         .subtitle {
+            display: inline-block;
             font-size: 8em;
             font-weight: 400;
             color: vars.$color-home-text;
@@ -52,6 +54,7 @@
             animation: vars.$animation-slide-right-home;
         }
         .description {
+            display: inline-block;
             font-size: 3.6em;
             font-weight: 400;
             color: vars.$color-home-text;
@@ -59,22 +62,6 @@
             opacity: 0;
 
             animation: vars.$animation-slide-right-home;
-        }
-        .button {
-            color: vars.$color-home-button-text;
-            padding: 0.5vw 2vh;
-            border: none;
-            border-radius: 5px;
-            font-size: 3.6em;
-            font-weight: 400;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            opacity: 0;
-            animation: vars.$animation-slide-right-home;
-
-            &:hover {
-                background-color: vars.$color-home-button-hover;
-            }
         }
     }
 
