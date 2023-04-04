@@ -2,6 +2,10 @@ import { useContext, useRef } from "react";
 import "../../styles/Home.scss";
 import { Context } from "../Context/Context.jsx";
 
+//TODO: ajouter un bouton pour desactivé a l'envie le shadow du text
+
+//TODO: regler le probleme du shadow quand la souris passe sur le header
+
 export const Home = () => {
     const { isClicked, setIsClicked } = useContext(Context);
 
