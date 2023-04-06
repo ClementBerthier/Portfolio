@@ -1,16 +1,41 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "../../styles/Header.scss";
 import { Context } from "../Context/Context.jsx";
 
 export const Header = () => {
     const { isClicked, setIsClicked } = useContext(Context);
+    const [isHovered, setIsHovered] = useState(false);
 
     const hidden = isClicked ? "" : "hidden";
 
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
     return (
-        <header className={`header + ${hidden}`}>
+        <header
+            className={`header + ${hidden}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
             <div className="logo-container">
-                <img className="logo" src="/images/logohead.png" alt="logo" />
+                {isHovered ? (
+                    <img
+                        className="logo"
+                        src="/images/logoheadHovered.png"
+                        alt="logo"
+                    />
+                ) : (
+                    <img
+                        className="logo"
+                        src="/images/logohead.png"
+                        alt="logo"
+                    />
+                )}
             </div>
             <div className="link-container">
                 <a className="link" href="#home">

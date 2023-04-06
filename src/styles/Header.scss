@@ -38,9 +38,17 @@
         }
         .link:hover {
             cursor: pointer;
-            color: #fff;
+            color: #000000;
             transform: scale(1.5);
         }
+    }
+}
+
+.header:hover {
+    background-color: #ea5455;
+    transition: background-color 0.5s ease-in-out;
+    .link {
+        color: #f9f5eb;
     }
 }
 
