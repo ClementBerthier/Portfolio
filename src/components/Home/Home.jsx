@@ -48,6 +48,7 @@ export const Home = () => {
                     Clic
                 </button>
             </div>
+            <div className="option">option</div>
             <div className={`home-container ${hidden}`}>
                 <h1 ref={titleRef} className="title">
                     Bienvenue sur mon Portfolio
