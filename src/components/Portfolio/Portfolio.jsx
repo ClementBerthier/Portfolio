@@ -14,7 +14,7 @@ export const Portfolio = () => {
 
     return (
         <Context.Provider value={{ isClicked, setIsClicked }}>
-            <div>
+            <div className="portfolio">
                 <Header />
                 <Home />
                 <AboutMe />
