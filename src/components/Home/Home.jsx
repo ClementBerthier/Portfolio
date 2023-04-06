@@ -1,6 +1,8 @@
 import { useContext, useRef } from "react";
-import "../../styles/Home.scss";
 import { Context } from "../Context/Context.jsx";
+import "../../styles/Home.scss";
+import "semantic-ui-css/semantic.min.css";
+import { Checkbox } from "semantic-ui-react";
 
 //TODO: ajouter un bouton pour desactivé a l'envie le shadow du text
 
@@ -48,7 +50,13 @@ export const Home = () => {
                     Clic
                 </button>
             </div>
-            <div className="option">option</div>
+            <div className="option-container">
+                <span className="title">Option</span>
+                <div className="option-content">
+                    <span>Ombres</span>
+                    <Checkbox toggle />
+                </div>
+            </div>
             <div className={`home-container ${hidden}`}>
                 <h1 ref={titleRef} className="title">
                     Bienvenue sur mon Portfolio
