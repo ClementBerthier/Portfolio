@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import "../../styles/Header.scss";
 import { Context } from "../Context/Context.jsx";
 
+//TODO: rendre plus fluide la transition entre les couleur du texte au hover du header
+
 export const Header = () => {
     const { isClicked, setIsClicked } = useContext(Context);
     const [isHovered, setIsHovered] = useState(false);
