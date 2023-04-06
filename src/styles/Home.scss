@@ -67,3 +67,15 @@
         display: none;
     }
 }
+
+.home::before {
+    content: "";
+    position: fixed;
+    top: -190em;
+    left: 100em;
+    width: 1800rem;
+    height: 50vh;
+    background-color: #e4dccf;
+    transform: translate(-65%, -50%) rotate(45deg);
+    z-index: -15;
+}

@@ -47,7 +47,10 @@ export const AboutMe = () => {
                         Si vous cherchez quelqu'un d'enthousiaste et toujours
                         prêt à relever de nouveaux défis, je serais ravi de
                         pouvoir échanger avec vous et vous rencontrer. N'hésitez
-                        pas à me <a href="/">contacter</a>{" "}
+                        pas à me{" "}
+                        <a href="/" className="contact-link">
+                            contacter
+                        </a>{" "}
                         {/* //TODO mettre le vrai lien  */}
                     </p>
                 </div>
