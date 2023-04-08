@@ -11,6 +11,7 @@ import { Checkbox } from "semantic-ui-react";
 export const Home = () => {
     const { isClicked, setIsClicked } = useContext(Context);
     const [shadowActived, setShadowActived] = useState(false);
+    const [optionHovered, setOptionHovered] = useState(false);
 
     const hidden = isClicked ? "" : "hidden";
     const hiddenButton = isClicked ? "hidden" : "";
@@ -43,6 +44,14 @@ export const Home = () => {
         }
     };
 
+    const handleMouseEnter = () => {
+        setOptionHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setOptionHovered(false);
+    };
+
     const handleClick = () => {
         setIsClicked(true);
     };
@@ -61,12 +70,26 @@ export const Home = () => {
                     Clic
                 </button>
             </div>
-            <div className="option-container">
-                <span className="title">Option</span>
-                <div className="option-content">
-                    <span>Ombres</span>
-                    <Checkbox toggle onClick={handleClickShadow} />
-                </div>
+            <div
+                className="option-container"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <span className="title">Options</span>
+                {optionHovered ? (
+                    <div className="option-content">
+                        <span>Ombres:</span>
+                        {shadowActived ? (
+                            <Checkbox
+                                toggle
+                                checked
+                                onClick={handleClickShadow}
+                            />
+                        ) : (
+                            <Checkbox toggle onClick={handleClickShadow} />
+                        )}
+                    </div>
+                ) : null}
             </div>
             <div className={`home-container ${hidden}`}>
                 <h1 ref={titleRef} className="title">
