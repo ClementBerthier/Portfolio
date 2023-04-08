@@ -2,9 +2,12 @@ import { data } from "../../assets/data/data";
 import { logoSkillsFrontend } from "../../assets/data/logoSkillsFrontend.js";
 import { logoSkillsBackend } from "../../assets/data/logoSkillsBackend.js";
 import { logoSkillsOther } from "../../assets/data/logoSkillsOther.js";
+import { Popup } from "semantic-ui-react";
+import { useEffect, useRef } from "react";
 import "semantic-ui-css/semantic.min.css";
 import "../../styles/AboutMe.scss";
-import { Popup } from "semantic-ui-react";
+
+//TODO: rendre responsive le bandeau
 
 export const AboutMe = () => {
     const skillsSection = [
@@ -25,9 +28,34 @@ export const AboutMe = () => {
         },
     ];
 
+    const presentationRef = useRef(null);
+
+    const handleScroll = () => {
+        const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+        const scrollPercentage =
+            scrollTop / document.documentElement.scrollHeight;
+        const maxOffset = 218; // Vous pouvez ajuster cette valeur pour augmenter ou diminuer l'amplitude du mouvement
+        const offsetX = maxOffset * scrollPercentage;
+
+        presentationRef.current.style.setProperty("--offsetX", `${-offsetX}vw`);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <section className="aboutMe" id="aboutMe">
-            <div className="presentation">
+            <div
+                className="presentation"
+                ref={presentationRef}
+                onScroll={handleScroll}
+            >
                 <div className="img-container">
                     <img
                         className="portrait"
