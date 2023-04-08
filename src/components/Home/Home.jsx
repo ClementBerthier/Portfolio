@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { Context } from "../Context/Context.jsx";
 import "../../styles/Home.scss";
 import "semantic-ui-css/semantic.min.css";
@@ -10,6 +10,7 @@ import { Checkbox } from "semantic-ui-react";
 
 export const Home = () => {
     const { isClicked, setIsClicked } = useContext(Context);
+    const [shadowActived, setShadowActived] = useState(false);
 
     const hidden = isClicked ? "" : "hidden";
     const hiddenButton = isClicked ? "hidden" : "";
@@ -33,11 +34,21 @@ export const Home = () => {
         });
     };
     const handleMouseMove = (event) => {
-        calcShadow(event);
+        if (shadowActived) {
+            calcShadow(event);
+        } else {
+            elements.forEach((element) => {
+                element.current.style.textShadow = "";
+            });
+        }
     };
 
     const handleClick = () => {
         setIsClicked(true);
+    };
+
+    const handleClickShadow = () => {
+        setShadowActived(!shadowActived);
     };
 
     return (
@@ -54,7 +65,7 @@ export const Home = () => {
                 <span className="title">Option</span>
                 <div className="option-content">
                     <span>Ombres</span>
-                    <Checkbox toggle />
+                    <Checkbox toggle onClick={handleClickShadow} />
                 </div>
             </div>
             <div className={`home-container ${hidden}`}>
