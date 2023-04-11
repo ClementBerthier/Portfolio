@@ -8,8 +8,6 @@ import { Checkbox } from "semantic-ui-react";
 
 //TODO: regler le probleme du shadow quand la souris passe sur le header
 
-//FIXME l'on peut voir la suite du portfolio sans cliquer sur clic
-
 export const Home = () => {
     const { isClicked, setIsClicked } = useContext(Context);
     const [shadowActived, setShadowActived] = useState(false);

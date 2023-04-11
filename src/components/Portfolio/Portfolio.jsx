@@ -17,10 +17,14 @@ export const Portfolio = () => {
             <div className="portfolio">
                 <Header />
                 <Home />
-                <AboutMe />
-                <Projects />
-                <Contact />
-                <Footer />
+                {isClicked ? (
+                    <>
+                        <AboutMe />
+                        <Projects />
+                        <Contact />
+                        <Footer />
+                    </>
+                ) : null}
             </div>
         </Context.Provider>
     );
