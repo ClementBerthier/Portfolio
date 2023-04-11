@@ -10,14 +10,14 @@ import { Context } from "../Context/Context.jsx";
 import { useState } from "react";
 
 export const Portfolio = () => {
-    const [isClicked, setIsClicked] = useState(false);
+    const [loaderFinish, setloaderFinish] = useState(false);
 
     return (
-        <Context.Provider value={{ isClicked, setIsClicked }}>
+        <Context.Provider value={{ loaderFinish, setloaderFinish }}>
             <div className="portfolio">
                 <Header />
                 <Home />
-                {isClicked ? (
+                {loaderFinish ? (
                     <>
                         <AboutMe />
                         <Projects />

@@ -4,18 +4,19 @@ import "../../styles/Home.scss";
 import "semantic-ui-css/semantic.min.css";
 import { Checkbox, Progress } from "semantic-ui-react";
 
-//TODO: ajouter un bouton pour desactivé a l'envie le shadow du text
-
 //TODO: regler le probleme du shadow quand la souris passe sur le header
 
+//TODO: regler le decalage au 100% de la barre progress.
+
 export const Home = () => {
-    const { isClicked, setIsClicked } = useContext(Context);
+    const { setloaderFinish } = useContext(Context);
     const [shadowActived, setShadowActived] = useState(false);
     const [optionHovered, setOptionHovered] = useState(false);
     const [currentV, setCurrentV] = useState(0.0);
+    const [showProgress, setShowProgress] = useState(true);
+    const [showHomeContainer, setShowHomeContainer] = useState(false);
 
-    const hidden = isClicked ? "" : "hidden";
-    const hiddenButton = isClicked ? "hidden" : "";
+    const hidden = showHomeContainer ? "" : "hidden";
 
     const titleRef = useRef();
     const subtitleRef = useRef();
@@ -54,44 +55,78 @@ export const Home = () => {
         setOptionHovered(false);
     };
 
-    const handleClick = () => {
-        setIsClicked(true);
-    };
-
     const handleClickShadow = () => {
         setShadowActived(!shadowActived);
     };
 
     useEffect(() => {
-        for (let i = 0; i <= 101; i += 0.01) {
+        for (let i = 0; i < 101; i += 0.01) {
             setTimeout(() => {
                 setCurrentV(i);
-            }, 40 * i);
+            }, 30 * i);
         }
     }, []);
+
+    useEffect(() => {
+        if (currentV >= 100) {
+            setTimeout(() => {
+                setShowProgress(false);
+            }, 500);
+            setTimeout(() => {
+                setShowHomeContainer(true);
+            }, 1000);
+            setloaderFinish(true);
+        } else {
+            setShowProgress(true);
+        }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentV]);
+
+    console.log("showProgress", showProgress);
 
     return (
         <section className="home" id="home" onMouseMove={handleMouseMove}>
             <div className="trigger-container">
-                <button
-                    className={`trigger ${hiddenButton}`}
-                    onClick={handleClick}
-                >
-                    <img
-                        className="logo"
-                        src="/images/logohead.png"
-                        alt="logo"
-                        style={{ opacity: currentV / 100 }}
-                    />
-                    <Progress
-                        percent={Math.floor(currentV)}
-                        progress
-                        size="large"
-                        color="blue"
-                    />
+                <button className={`trigger `}>
+                    {showProgress ? (
+                        <img
+                            className="logo"
+                            src="/images/logohead.png"
+                            alt="logo"
+                            style={{ opacity: currentV / 100 }}
+                        />
+                    ) : (
+                        <img
+                            className="logo"
+                            src="/images/logohead.png"
+                            alt="logo"
+                            style={{
+                                animation:
+                                    "progress-opacity 1s ease-in-out forwards",
+                            }}
+                        />
+                    )}
+                    {showProgress ? (
+                        <Progress
+                            className="progress"
+                            percent={Math.floor(currentV)}
+                            progress
+                            size="large"
+                            color="blue"
+                        />
+                    ) : (
+                        <Progress
+                            className="progressFull"
+                            percent={Math.floor(currentV)}
+                            progress
+                            size="large"
+                            color="blue"
+                        />
+                    )}
                 </button>
             </div>
-            {isClicked ? (
+            {!showProgress ? (
                 <div
                     className="option-container"
                     onMouseEnter={handleMouseEnter}

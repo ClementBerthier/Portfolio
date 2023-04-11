@@ -36,6 +36,15 @@
     }
 }
 
+@keyframes progress-opacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes size-up {
     0% {
         transform: scale(0);

@@ -5,10 +5,10 @@ import { Context } from "../Context/Context.jsx";
 //TODO: rendre plus fluide la transition entre les couleur du texte au hover du header
 
 export const Header = () => {
-    const { isClicked, setIsClicked } = useContext(Context);
+    const { loaderFinish } = useContext(Context);
     const [isHovered, setIsHovered] = useState(false);
 
-    const hidden = isClicked ? "" : "hidden";
+    const hidden = loaderFinish ? "" : "hidden";
 
     const handleMouseEnter = () => {
         setIsHovered(true);
