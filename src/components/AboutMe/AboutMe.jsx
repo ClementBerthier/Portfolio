@@ -3,11 +3,8 @@ import { logoSkillsFrontend } from "../../assets/data/logoSkillsFrontend.js";
 import { logoSkillsBackend } from "../../assets/data/logoSkillsBackend.js";
 import { logoSkillsOther } from "../../assets/data/logoSkillsOther.js";
 import { Popup } from "semantic-ui-react";
-import { useEffect, useRef } from "react";
 import "semantic-ui-css/semantic.min.css";
 import "../../styles/AboutMe.scss";
-
-//TODO: rendre responsive le bandeau
 
 export const AboutMe = () => {
     const skillsSection = [
@@ -28,34 +25,9 @@ export const AboutMe = () => {
         },
     ];
 
-    const presentationRef = useRef(null);
-
-    const handleScroll = () => {
-        const scrollTop =
-            window.pageYOffset || document.documentElement.scrollTop;
-        const scrollPercentage =
-            scrollTop / document.documentElement.scrollHeight;
-        const maxOffset = 218; // Vous pouvez ajuster cette valeur pour augmenter ou diminuer l'amplitude du mouvement
-        const offsetX = maxOffset * scrollPercentage;
-
-        presentationRef.current.style.setProperty("--offsetX", `${-offsetX}vw`);
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
     return (
         <section className="aboutMe" id="aboutMe">
-            <div
-                className="presentation"
-                ref={presentationRef}
-                onScroll={handleScroll}
-            >
+            <div className="presentation">
                 <div className="img-container">
                     <img
                         className="portrait"
@@ -84,7 +56,6 @@ export const AboutMe = () => {
                 </div>
             </div>
             <div className="timeline">
-                <h1 className="title">Mon Parcours</h1>
                 <div className="content">
                     {data.map((data) => (
                         <div className="box" key={data.id}>
@@ -94,7 +65,6 @@ export const AboutMe = () => {
                         </div>
                     ))}
                 </div>
-                <div className="line"></div>
 
                 <div className="years">
                     {data.map((data) => (

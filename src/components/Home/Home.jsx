@@ -1,8 +1,8 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../Context/Context.jsx";
 import "../../styles/Home.scss";
 import "semantic-ui-css/semantic.min.css";
-import { Checkbox } from "semantic-ui-react";
+import { Checkbox, Progress } from "semantic-ui-react";
 
 //TODO: ajouter un bouton pour desactivé a l'envie le shadow du text
 
@@ -12,6 +12,7 @@ export const Home = () => {
     const { isClicked, setIsClicked } = useContext(Context);
     const [shadowActived, setShadowActived] = useState(false);
     const [optionHovered, setOptionHovered] = useState(false);
+    const [currentV, setCurrentV] = useState(0.0);
 
     const hidden = isClicked ? "" : "hidden";
     const hiddenButton = isClicked ? "hidden" : "";
@@ -34,6 +35,7 @@ export const Home = () => {
             element.current.style.textShadow = shadow;
         });
     };
+
     const handleMouseMove = (event) => {
         if (shadowActived) {
             calcShadow(event);
@@ -60,6 +62,14 @@ export const Home = () => {
         setShadowActived(!shadowActived);
     };
 
+    useEffect(() => {
+        for (let i = 0; i <= 101; i += 0.01) {
+            setTimeout(() => {
+                setCurrentV(i);
+            }, 40 * i);
+        }
+    }, []);
+
     return (
         <section className="home" id="home" onMouseMove={handleMouseMove}>
             <div className="trigger-container">
@@ -67,30 +77,44 @@ export const Home = () => {
                     className={`trigger ${hiddenButton}`}
                     onClick={handleClick}
                 >
-                    Clic
+                    <img
+                        className="logo"
+                        src="/images/logohead.png"
+                        alt="logo"
+                        style={{ opacity: currentV / 100 }}
+                    />
+                    <Progress
+                        percent={Math.floor(currentV)}
+                        progress
+                        size="large"
+                        color="blue"
+                    />
                 </button>
             </div>
-            <div
-                className="option-container"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                <span className="title">Options</span>
-                {optionHovered ? (
-                    <div className="option-content">
-                        <span>Ombres:</span>
-                        {shadowActived ? (
-                            <Checkbox
-                                toggle
-                                checked
-                                onClick={handleClickShadow}
-                            />
-                        ) : (
-                            <Checkbox toggle onClick={handleClickShadow} />
-                        )}
-                    </div>
-                ) : null}
-            </div>
+            {isClicked ? (
+                <div
+                    className="option-container"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <span className="title">Options</span>
+                    {optionHovered ? (
+                        <div className="option-content">
+                            <span>Ombres:</span>
+                            {shadowActived ? (
+                                <Checkbox
+                                    toggle
+                                    checked
+                                    onClick={handleClickShadow}
+                                />
+                            ) : (
+                                <Checkbox toggle onClick={handleClickShadow} />
+                            )}
+                        </div>
+                    ) : null}
+                </div>
+            ) : null}
+
             <div className={`home-container ${hidden}`}>
                 <h1 ref={titleRef} className="title">
                     Bienvenue sur mon Portfolio

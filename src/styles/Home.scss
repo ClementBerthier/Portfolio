@@ -11,20 +11,14 @@
 
     .trigger-container {
         .trigger {
-            width: 15vw;
-            height: 5vh;
             background-color: vars.$background-color-trigger;
             border: none;
-            font-size: 10em;
-            font-weight: bold;
-            opacity: 0;
-            font-family: vars.$font-familly-home-trigger;
-            animation: vars.$animation-size-up-home;
-        }
-        .trigger:hover {
             opacity: 1;
-            cursor: pointer;
-            animation: vars.$animation-font-size-up-home;
+
+            .logo {
+                width: 50em;
+                height: 40em;
+            }
         }
     }
 

@@ -1,5 +1,6 @@
 .aboutMe {
-    height: 100vh;
+    height: 200vh;
+    font-family: Montserrat, serif;
 
     .presentation {
         display: flex;
@@ -8,11 +9,12 @@
         justify-content: center;
         gap: 2rem;
         padding: 3rem;
-        background-color: #e4dccf;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
-            0 5px 15px rgba(0, 0, 0, 0.2) inset;
+        background-color: transparent;
         position: relative;
         overflow: hidden;
+        font-size: 1.2em;
+        line-height: 3em;
+        font-weight: 600;
 
         .img-container {
             z-index: 2;
@@ -31,22 +33,10 @@
         }
     }
 
-    .presentation::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 75vw;
-        height: 50vh;
-        background-color: #f9f5eb62;
-        transform: translate(calc(-17.2% + var(--offsetX, 0)), -50%)
-            rotate(45deg);
-        z-index: 1;
-    }
-
     .timeline {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
         margin: 8em 0;
 
         .title {
@@ -57,42 +47,28 @@
 
         .content {
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-
+            flex-direction: column;
             .box {
                 position: relative;
                 background-color: #ffffff;
                 border-radius: 5px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
                 padding: 20px;
-                font-size: 1.1em;
+                font-size: 2em;
                 color: #333;
                 max-width: 15vw;
                 text-align: center;
                 line-height: 1.5;
                 margin-bottom: 2vh;
             }
-            .box::before {
-                content: "";
-                position: absolute;
-                bottom: -10px;
-                left: 50%;
-                width: 0;
-                height: 0;
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                border-top: 10px solid #ffffff;
-                transform: translateX(-50%);
-            }
         }
 
         .line {
-            margin-right: 1vw;
             height: 0.5vh;
-            width: 99.74%;
+            width: 80%;
             position: relative;
-            background: #ea5455;
+            background: #000;
+            transform: rotate(90deg);
         }
 
         .line::before,
@@ -101,12 +77,12 @@
             position: absolute;
             right: 0;
             top: 0;
-            background: #ea5455;
+            background: #000;
             height: 0.5vh;
             width: 2.5vw;
         }
 
-        .line::before {
+        /* .line::before {
             transform: rotate(55deg);
             transform-origin: right bottom;
         }
@@ -114,13 +90,11 @@
         .line::after {
             transform: rotate(-55deg);
             transform-origin: right top;
-        }
+        } */
 
         .years {
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-
+            flex-direction: column;
             .box-container {
                 width: 15em;
 
@@ -128,26 +102,14 @@
                     position: relative;
                     background-color: #ffffff;
                     border-radius: 5px;
-                    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.5);
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
                     padding: 20px;
-                    font-size: 1.1em;
+                    font-size: 2em;
                     color: #333;
-                    max-width: 15em;
+                    max-width: 15vw;
                     text-align: center;
                     line-height: 1.5;
-                    margin-top: 2vh;
-                }
-                .box::before {
-                    content: "";
-                    position: absolute;
-                    top: -10px;
-                    left: 50%;
-                    width: 0;
-                    height: 0;
-                    border-left: 10px solid transparent;
-                    border-right: 10px solid transparent;
-                    border-bottom: 10px solid #ffffff;
-                    transform: translateX(-50%);
+                    margin-bottom: 2vh;
                 }
             }
         }
