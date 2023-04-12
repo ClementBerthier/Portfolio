@@ -1,13 +1,11 @@
 import "../../styles/Portfolio.scss";
 import "../../styles/keyframes.scss";
-import { AboutMe } from "../AboutMe/AboutMe.jsx";
 import { Header } from "../Header/Header.jsx";
 import { Home } from "../Home/Home.jsx";
-import { Projects } from "../Projects/Projects.jsx";
-import { Contact } from "../Contact/Contact.jsx";
 import { Footer } from "../Footer/Footer.jsx";
 import { Context } from "../Context/Context.jsx";
 import { useState } from "react";
+import { Binder } from "../Binder/Binder.jsx";
 
 export const Portfolio = () => {
     const [loaderFinish, setloaderFinish] = useState(false);
@@ -19,9 +17,7 @@ export const Portfolio = () => {
                 <Home />
                 {loaderFinish ? (
                     <>
-                        <AboutMe />
-                        <Projects />
-                        <Contact />
+                        <Binder />
                         <Footer />
                     </>
                 ) : null}

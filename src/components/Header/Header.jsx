@@ -43,7 +43,7 @@ export const Header = () => {
                 <a className="link" href="#home">
                     Accueil
                 </a>
-                <a className="link" href="#aboutMe">
+                <a className="link" href="#binder">
                     A Propos
                 </a>
                 <a className="link" href="#projects">

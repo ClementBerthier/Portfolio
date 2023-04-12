@@ -2,11 +2,14 @@ import { data } from "../../assets/data/data";
 import { logoSkillsFrontend } from "../../assets/data/logoSkillsFrontend.js";
 import { logoSkillsBackend } from "../../assets/data/logoSkillsBackend.js";
 import { logoSkillsOther } from "../../assets/data/logoSkillsOther.js";
-import { Popup } from "semantic-ui-react";
+import { Button, Header, Modal, Popup } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "../../styles/AboutMe.scss";
+import { useState } from "react";
 
 export const AboutMe = () => {
+    const [open, setOpen] = useState(false);
+
     const skillsSection = [
         {
             id: 1,
@@ -56,62 +59,28 @@ export const AboutMe = () => {
                 </div>
             </div>
             <div className="timeline">
-                <div className="content">
-                    {data.map((data) => (
-                        <div className="box" key={data.id}>
-                            <p className="description">{data.description}</p>
-                            <p className="school">{data.school}</p>
-                            <p className="place">{data.place}</p>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="years">
-                    {data.map((data) => (
-                        <div className="box-container" key={data.id}>
-                            <div className="box">
-                                <p>{data.date}</p>
+                {data.map((data) => (
+                    <Modal
+                        closeIcon
+                        open={open}
+                        trigger={
+                            <div>
+                                <time className="time"></time>
+                                <p className="description"></p>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <div className="skills">
-                <h1 className="title">Mes Compétences</h1>
-                <div className="skills-box">
-                    {skillsSection.map((section) => (
-                        <div
-                            className={section.name.toLowerCase()}
-                            key={section.id}
-                        >
-                            <h2 className="title">{section.name}</h2>
-                            <div className="logo-box">
-                                {section.variable.map((logo) => (
-                                    <a
-                                        className="logo-link"
-                                        href={logo.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        key={logo.id}
-                                    >
-                                        <Popup
-                                            className="popup"
-                                            trigger={
-                                                <img
-                                                    className="logo"
-                                                    src={logo.path}
-                                                    alt={logo.name}
-                                                />
-                                            }
-                                            content={logo.name}
-                                            size="huge"
-                                        />
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                        }
+                        onClose={() => setOpen(false)}
+                        onOpen={() => setOpen(true)}
+                    >
+                        <Header icon="archive" content="Archive Old Messages" />
+                        <Modal.Content>
+                            <p>
+                                Your inbox is getting full, would you like us to
+                                enable automatic archiving of old messages?
+                            </p>
+                        </Modal.Content>
+                    </Modal>
+                ))}
             </div>
         </section>
     );
