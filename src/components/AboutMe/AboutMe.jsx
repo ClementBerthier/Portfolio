@@ -2,9 +2,10 @@ import { data } from "../../assets/data/data";
 import { logoSkillsFrontend } from "../../assets/data/logoSkillsFrontend.js";
 import { logoSkillsBackend } from "../../assets/data/logoSkillsBackend.js";
 import { logoSkillsOther } from "../../assets/data/logoSkillsOther.js";
-import { Button, Header, Modal, Popup } from "semantic-ui-react";
+import { Header, Modal, Popup } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "../../styles/AboutMe.scss";
+import "../../styles/modal_css.scss";
 import { useState } from "react";
 
 export const AboutMe = () => {
@@ -44,6 +45,7 @@ export const AboutMe = () => {
                 <div className="timeline">
                     {data.map((data) => (
                         <Modal
+                            size="small"
                             className="modal-timeline"
                             closeIcon
                             key={data.id}
@@ -57,13 +59,18 @@ export const AboutMe = () => {
                             onClose={() => setOpen(null)}
                             onOpen={() => setOpen(data.id)}
                         >
-                            <Header content={data.role} />
+                            <Header
+                                content={
+                                    <h1 className="modal-title">{data.role}</h1>
+                                }
+                                className="header-modal"
+                            />
                             <Modal.Content>
-                                <div>
-                                    <p>{data.description}</p>
-                                    <p>{data.date}</p>
-                                    <p>{data.school}</p>
-                                    <p>{data.place}</p>
+                                <div className="info-container">
+                                    <p className="info">{data.description}</p>
+                                    <p className="info">{data.date}</p>
+                                    <p className="info">{data.school}</p>
+                                    <p className="info"> {data.place}</p>
                                 </div>
                             </Modal.Content>
                         </Modal>

@@ -44,7 +44,7 @@
             border-radius: 10px;
 
             font-size: 1.5em;
-            margin: 2em 2em;
+            margin: 1.5em 2em;
 
             background-color: white;
             .trigger-container {
@@ -65,7 +65,7 @@
             border: 2px solid black;
             border-radius: 10px;
             font-size: 1.5em;
-            margin: 2em 2em;
+            margin: 1.5em 2em;
             display: flex;
             flex-direction: column;
             background-color: white;
@@ -76,6 +76,7 @@
                 display: flex;
                 flex-direction: column;
                 .title {
+                    font-size: 1.5em;
                     font-weight: 600;
                     margin: 0.5em;
                     text-align: center;
