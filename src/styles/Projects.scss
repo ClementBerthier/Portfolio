@@ -14,11 +14,61 @@
 
     .carousel-container {
         .image-container {
+            position: relative;
+            width: 65%;
+            margin: 0;
+            left: 17.5%;
             .image-project {
-                width: 65%;
+                width: 100%;
                 height: 100%;
             }
+            .info-container {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                /* Ajoutez des styles supplémentaires pour le texte, la couleur d'arrière-plan, etc. */
+                background-color: rgba(228, 223, 223, 0.651);
+                color: #000000;
+
+                .title-container {
+                    margin: 0 2em;
+                    padding: 2em 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #fff;
+                    .info-title,
+                    .number {
+                        font-size: 3em;
+                        font-family: Montserrat, sans-serif;
+                        font-weight: 800;
+                        text-align: start;
+                    }
+                }
+                .description {
+                    font-family: Merriweather, sans-serif;
+                    line-height: 1.3em;
+                    height: 100%;
+                    font-size: 2em;
+                    margin: 2em;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .hidden {
+                display: none;
+            }
         }
+    }
+
+    .seeMore {
+        margin-top: 3em;
+        font-size: 2em;
     }
 }
 
@@ -32,7 +82,7 @@
     width: 0%;
     left: 90%;
     top: 50%;
-    margin-top: 200px !important;
+    margin-top: 8.65em !important;
 
     &:hover {
         background-color: transparent !important;
