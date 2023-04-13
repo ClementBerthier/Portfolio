@@ -2,6 +2,7 @@ import "../../styles/Binder.scss";
 import { AboutMe } from "../AboutMe/AboutMe.jsx";
 import { Projects } from "../Projects/Projects.jsx";
 
+//TODO: lié les boutons avec les sections
 export const Binder = () => {
     return (
         <div className="binder" id="binder">

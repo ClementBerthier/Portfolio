@@ -37,24 +37,29 @@ export const Projects = () => {
                                 src={project.path}
                                 alt={project.name}
                             />
-
-                            <div
-                                className={`info-container ${
-                                    !mouseEnter ? "hidden" : ""
-                                }`}
+                            <a
+                                href={project.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                <div className="title-container">
-                                    <h3 className="info-title">
-                                        {project.name}
-                                    </h3>
-                                    <span className="number">
-                                        {project.id}/{projects.length}
-                                    </span>
+                                <div
+                                    className={`info-container ${
+                                        !mouseEnter ? "hidden" : ""
+                                    }`}
+                                >
+                                    <div className="title-container">
+                                        <h3 className="info-title">
+                                            {project.name}
+                                        </h3>
+                                        <span className="number">
+                                            {project.id}/{projects.length}
+                                        </span>
+                                    </div>
+                                    <div className="description">
+                                        <p>{project.description}</p>
+                                    </div>
                                 </div>
-                                <div className="description">
-                                    <p>{project.description}</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     ))}
                 </Carousel>
