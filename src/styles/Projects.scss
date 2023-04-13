@@ -1,68 +1,58 @@
 .projects {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .title {
-        text-align: center;
-        margin-top: 5%;
-        font-size: 2.5rem;
-        font-weight: 600;
-        margin: 2vh;
-    }
-    .grid-container {
-        display: grid;
-        width: 50%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 10px;
-        margin: 0 auto;
-    }
-    .grid-item {
-        .project-link {
-            position: relative;
-            .project-image {
-                height: 100%;
-                width: 100%;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            .image-text {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -150%);
-                color: white;
-                font-size: 2rem;
-                font-weight: bold;
-                text-align: center;
-                opacity: 0;
-                text-shadow: 2px 2px #000000;
-            }
+    height: 100%;
 
-            .active {
-                opacity: 1;
+    .title-container {
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title {
+            font-weight: 800;
+            font-size: 4em;
+        }
+    }
+
+    .carousel-container {
+        .image-container {
+            .image-project {
+                width: 65%;
+                height: 100%;
             }
         }
     }
-    .button {
-        margin: 0 auto;
-        margin-top: 5vh;
-        width: 100%;
-        height: 5vh;
-        border: 1px solid #000000;
-        border-radius: 5px;
-        background-color: #000000;
-        color: #ffffff;
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-align: center;
-        cursor: pointer;
-        &:hover {
-            background-color: #ffffff;
-            color: #000000;
-        }
+}
+
+.carousel-status {
+    display: none;
+}
+
+.carousel.carousel-slider .control-arrow {
+    position: absolute;
+    height: 0%;
+    width: 0%;
+    left: 90%;
+    top: 50%;
+    margin-top: 200px !important;
+
+    &:hover {
+        background-color: transparent !important;
     }
+}
+
+.carousel .control-prev.control-arrow {
+    left: 7.8% !important;
+}
+
+.carousel .control-next.control-arrow:before {
+    border-left: 8px solid #000;
+    transform: scale(3);
+}
+
+.carousel .control-prev.control-arrow:before {
+    border-right: 8px solid #000;
+    transform: scale(3);
+}
+
+.control-arrow.control-next {
+    position: absolute;
 }
