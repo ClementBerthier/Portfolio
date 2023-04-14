@@ -8,14 +8,14 @@ import { useState } from "react";
 import { Binder } from "../Binder/Binder.jsx";
 
 export const Portfolio = () => {
-    const [loaderFinish, setloaderFinish] = useState(false);
+    const [context, setContext] = useState(false);
 
     return (
-        <Context.Provider value={{ loaderFinish, setloaderFinish }}>
+        <Context.Provider value={{ context, setContext }}>
             <div className="portfolio">
                 <Header />
                 <Home />
-                {loaderFinish ? (
+                {context.loaderFinish ? (
                     <>
                         <Binder />
                         <Footer />

@@ -85,6 +85,7 @@ export const AboutMe = () => {
                                     href={logo.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    key={logo.id}
                                 >
                                     <Popup
                                         position="top center"
@@ -94,7 +95,6 @@ export const AboutMe = () => {
                                         trigger={
                                             <img
                                                 className="logoFront"
-                                                key={logo.id}
                                                 src={logo.path}
                                                 alt={logo.name}
                                             />
@@ -112,6 +112,7 @@ export const AboutMe = () => {
                                     href={logo.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    key={logo.id}
                                 >
                                     <Popup
                                         position="top center"
@@ -121,7 +122,6 @@ export const AboutMe = () => {
                                         trigger={
                                             <img
                                                 className="logoBack"
-                                                key={logo.id}
                                                 src={logo.path}
                                                 alt={logo.name}
                                             />
@@ -139,6 +139,7 @@ export const AboutMe = () => {
                                     href={logo.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    key={logo.id}
                                 >
                                     <Popup
                                         position="top center"
@@ -148,7 +149,6 @@ export const AboutMe = () => {
                                         trigger={
                                             <img
                                                 className="logoTools"
-                                                key={logo.id}
                                                 src={logo.path}
                                                 alt={logo.name}
                                             />

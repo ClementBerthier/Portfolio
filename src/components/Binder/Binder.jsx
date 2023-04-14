@@ -1,29 +1,53 @@
+import { useContext, useEffect } from "react";
 import "../../styles/Binder.scss";
 import { AboutMe } from "../AboutMe/AboutMe.jsx";
 import { Contact } from "../Contact/Contact.jsx";
 import { Projects } from "../Projects/Projects.jsx";
+import { Context } from "../Context/Context.jsx";
 
 //TODO: lié les boutons avec les sections
 export const Binder = () => {
+    const { context, setContext } = useContext(Context);
+
+    useEffect(() => {
+        setContext({ ...context, binderId: 1 });
+    }, []);
+
+    const handleClick = (event) => {
+        const id = event.target.id;
+        console.log(id);
+        setContext({ ...context, binderId: Number(id) });
+    };
     return (
         <div className="binder" id="binder">
             <div className="binder-container">
                 <div className="binder-tab">
-                    <div className="aboutMe-tab">
-                        <span className="text">A Propos</span>
+                    <div className="aboutMe-tab" id="1" onClick={handleClick}>
+                        <span className="text" id="1" onClick={handleClick}>
+                            {" "}
+                            Propos
+                        </span>
                     </div>
-                    <div className="project-tab">
-                        <span className="text">Projets</span>
+                    <div className="project-tab" id="2" onClick={handleClick}>
+                        <span className="text" id="2" onClick={handleClick}>
+                            Projets
+                        </span>
                     </div>
-                    <div className="contac-tab">
-                        <span className="text">Contact</span>
+                    <div className="contac-tab" id="3" onClick={handleClick}>
+                        <span className="text" id="3" onClick={handleClick}>
+                            Contact
+                        </span>
                     </div>
                 </div>
 
                 <div className="info-container">
-                    {/*<AboutMe />*/}
-                    {/*<Projects />*/}
-                    {<Contact />}
+                    {context.binderId === 1 ? (
+                        <AboutMe />
+                    ) : context.binderId === 2 ? (
+                        <Projects />
+                    ) : context.binderId === 3 ? (
+                        <Contact />
+                    ) : null}
                 </div>
             </div>
         </div>

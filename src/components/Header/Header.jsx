@@ -5,10 +5,10 @@ import { Context } from "../Context/Context.jsx";
 //TODO: rendre plus fluide la transition entre les couleur du texte au hover du header
 
 export const Header = () => {
-    const { loaderFinish } = useContext(Context);
+    const { context, setContext } = useContext(Context);
     const [isHovered, setIsHovered] = useState(false);
 
-    const hidden = loaderFinish ? "" : "hidden";
+    const hidden = context.loaderFinish ? "" : "hidden";
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -16,6 +16,11 @@ export const Header = () => {
 
     const handleMouseLeave = () => {
         setIsHovered(false);
+    };
+
+    const handleClick = (event) => {
+        const id = event.target.id;
+        setContext({ ...context, binderId: Number(id) });
     };
 
     return (
@@ -43,16 +48,13 @@ export const Header = () => {
                 <a className="link" href="#home">
                     Accueil
                 </a>
-                <a className="link" href="#binder">
+                <a className="link" href="#binder" id="1" onClick={handleClick}>
                     A Propos
                 </a>
-                <a className="link" href="#projects">
+                <a className="link" href="#binder" id="2" onClick={handleClick}>
                     Projets
                 </a>
-                {/* <a className="link" href="#game">
-                    Game
-                </a> */}
-                <a className="link" href="#contact">
+                <a className="link" href="#binder" id="3" onClick={handleClick}>
                     Contact
                 </a>
             </div>

@@ -9,7 +9,7 @@ import { Checkbox, Progress } from "semantic-ui-react";
 //TODO: regler le decalage au 100% de la barre progress.
 
 export const Home = () => {
-    const { setloaderFinish } = useContext(Context);
+    const { context, setContext } = useContext(Context);
     const [shadowActived, setShadowActived] = useState(false);
     const [optionHovered, setOptionHovered] = useState(false);
     const [currentV, setCurrentV] = useState(0.0);
@@ -75,7 +75,7 @@ export const Home = () => {
             setTimeout(() => {
                 setShowHomeContainer(true);
             }, 1000);
-            setloaderFinish(true);
+            setContext({ ...context, loaderFinish: true });
         } else {
             setShowProgress(true);
         }
