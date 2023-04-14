@@ -14,16 +14,30 @@
         .binder-tab {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             align-items: center;
+            width: 6em;
+
+            .aboutMe-tab {
+                .text {
+                    padding-bottom: 0.5em;
+                }
+            }
+
+            .project-tab {
+                .text {
+                    padding-top: 0.3em;
+                }
+            }
 
             .text {
+                display: inline-block;
                 position: relative;
                 text-align: center;
-                left: 32%;
+                left: -25%;
                 font-size: 3em;
                 transform: rotate(-90deg);
                 width: 5em;
+                white-space: nowrap;
             }
         }
         .binder-tab > * {
@@ -32,7 +46,8 @@
             height: 50%;
             display: flex;
             align-items: center;
-            clip-path: polygon(60% 12%, 100% 0, 100% 100%, 60% 88%);
+            //clip-path: polygon(60% 12%, 100% 0, 100% 100%, 60% 88%);
+            clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 83%);
         }
 
         .info-container {

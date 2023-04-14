@@ -1,5 +1,6 @@
 import "../../styles/Binder.scss";
 import { AboutMe } from "../AboutMe/AboutMe.jsx";
+import { Contact } from "../Contact/Contact.jsx";
 import { Projects } from "../Projects/Projects.jsx";
 
 //TODO: lié les boutons avec les sections
@@ -9,7 +10,7 @@ export const Binder = () => {
             <div className="binder-container">
                 <div className="binder-tab">
                     <div className="aboutMe-tab">
-                        <span className="text">A propos</span>
+                        <span className="text">A Propos</span>
                     </div>
                     <div className="project-tab">
                         <span className="text">Projets</span>
@@ -21,7 +22,8 @@ export const Binder = () => {
 
                 <div className="info-container">
                     {/*<AboutMe />*/}
-                    {<Projects />}
+                    {/*<Projects />*/}
+                    {<Contact />}
                 </div>
             </div>
         </div>
