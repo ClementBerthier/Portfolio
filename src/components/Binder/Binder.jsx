@@ -5,12 +5,12 @@ import { Contact } from "../Contact/Contact.jsx";
 import { Projects } from "../Projects/Projects.jsx";
 import { Context } from "../Context/Context.jsx";
 
-//TODO: lié les boutons avec les sections
 export const Binder = () => {
     const { context, setContext } = useContext(Context);
 
     useEffect(() => {
         setContext({ ...context, binderId: 1 });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleClick = (event) => {
