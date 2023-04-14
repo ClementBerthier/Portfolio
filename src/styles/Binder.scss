@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 5em;
     .binder-container {
         width: 180em;
         height: 100em;
@@ -38,19 +38,27 @@
                 width: 5em;
                 white-space: nowrap;
             }
+
+            .selected {
+                background-color: #159895;
+            }
         }
         .binder-tab > * {
-            background-color: #cec4a9;
+            background-color: #159895;
             width: 100%;
-            height: 50%;
+            height: 20%;
             display: flex;
             align-items: center;
             clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 83%);
+            margin-right: -0.1em;
         }
 
         .info-container {
-            background-color: #beb7a2;
+            background-color: #273d57;
             width: 100%;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
         }
     }
 }

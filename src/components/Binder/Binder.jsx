@@ -22,18 +22,36 @@ export const Binder = () => {
         <div className="binder" id="binder">
             <div className="binder-container">
                 <div className="binder-tab">
-                    <div className="aboutMe-tab" id="1" onClick={handleClick}>
+                    <div
+                        className={`aboutMe-tab ${
+                            context.binderId === 1 ? "selected" : ""
+                        }`}
+                        id="1"
+                        onClick={handleClick}
+                    >
                         <span className="text" id="1" onClick={handleClick}>
                             {" "}
                             A Propos
                         </span>
                     </div>
-                    <div className="project-tab" id="2" onClick={handleClick}>
+                    <div
+                        className={`project-tab ${
+                            context.binderId === 2 ? "selected" : ""
+                        }`}
+                        id="2"
+                        onClick={handleClick}
+                    >
                         <span className="text" id="2" onClick={handleClick}>
                             Projets
                         </span>
                     </div>
-                    <div className="contac-tab" id="3" onClick={handleClick}>
+                    <div
+                        className={`contact-tab ${
+                            context.binderId === 3 ? "selected" : ""
+                        }`}
+                        id="3"
+                        onClick={handleClick}
+                    >
                         <span className="text" id="3" onClick={handleClick}>
                             Contact
                         </span>

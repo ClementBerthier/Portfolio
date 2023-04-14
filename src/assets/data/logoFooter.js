@@ -8,7 +8,7 @@ export const logoFooter = [
     {
         id: 2,
         name: "Github",
-        path: "/images/logo-git.png",
+        path: "/images/logos/github.png",
         url: "https://github.com/ClementBerthier",
     },
 ];
