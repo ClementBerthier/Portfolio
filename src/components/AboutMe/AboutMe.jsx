@@ -6,10 +6,17 @@ import { Header, Modal, Popup } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "../../styles/AboutMe.scss";
 import "../../styles/modal_css.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Context } from "../Context/Context.jsx";
 
 export const AboutMe = () => {
+    const { context, setContext } = useContext(Context);
     const [open, setOpen] = useState(false);
+
+    const handleClick = (event) => {
+        const id = event.target.id;
+        setContext({ ...context, binderId: Number(id) });
+    };
 
     return (
         <section className="aboutMe" id="aboutMe">
@@ -34,10 +41,14 @@ export const AboutMe = () => {
                         prêt à relever de nouveaux défis, je serais ravi de
                         pouvoir échanger avec vous et vous rencontrer. N'hésitez
                         pas à me{" "}
-                        <a href="/" className="contact-link">
+                        <a
+                            href="/#binder"
+                            id="3"
+                            className="contact-link"
+                            onClick={handleClick}
+                        >
                             contacter
                         </a>{" "}
-                        {/* //TODO mettre le vrai lien  */}
                     </p>
                 </div>
             </div>

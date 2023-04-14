@@ -5,8 +5,8 @@
     align-items: center;
 
     .binder-container {
-        width: 150em;
-        height: 85em;
+        width: 200em;
+        height: 120em;
         display: flex;
         flex-direction: row;
         //border: 2px solid black;
@@ -19,7 +19,7 @@
 
             .aboutMe-tab {
                 .text {
-                    padding-top: 0.2em;
+                    padding-bottom: 0.5em;
                 }
             }
 

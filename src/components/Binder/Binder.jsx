@@ -25,7 +25,7 @@ export const Binder = () => {
                     <div className="aboutMe-tab" id="1" onClick={handleClick}>
                         <span className="text" id="1" onClick={handleClick}>
                             {" "}
-                            Propos
+                            A Propos
                         </span>
                     </div>
                     <div className="project-tab" id="2" onClick={handleClick}>
