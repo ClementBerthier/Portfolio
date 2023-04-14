@@ -64,7 +64,7 @@ export const Projects = () => {
                     ))}
                 </Carousel>
             </div>
-            <Button className="seeMore">en voir +</Button>
+            {/*<Button className="seeMore">en voir +</Button>*/}
         </section>
     );
 };

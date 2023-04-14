@@ -1,31 +1,31 @@
 .aboutMe {
     font-family: Montserrat, serif;
-    height: 100%;
 
     .presentation {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
         background-color: white;
+        justify-content: space-around;
+        align-items: center;
         border-radius: 10px;
-        line-height: 5em;
+        line-height: 4em;
         font-weight: 500;
         margin: 2em 3em;
+        height: 40em;
 
         .img-container {
-            max-width: 80em;
+            display: flex;
+            align-items: center;
             .portrait {
-                width: 100%;
-                height: 70%;
                 border-radius: 50%;
+                height: 35em;
             }
         }
 
         .description {
-            width: 70%;
+            width: 60%;
             text-align: center;
-            font-size: 3em;
+            font-size: 2.3em;
         }
     }
 
@@ -35,7 +35,7 @@
 
         .timeline {
             width: 30%;
-            height: 28em;
+            height: 25em;
             border: 2px solid black;
             display: flex;
             flex-direction: column;
@@ -44,7 +44,7 @@
             border-radius: 10px;
 
             font-size: 2em;
-            margin: 1.5em 2em;
+            margin: 1em 2em;
 
             background-color: white;
             .trigger-container {
@@ -65,11 +65,11 @@
 
         .skills {
             width: 70%;
-            height: 37.8em;
+            height: 33.2em;
             border: 2px solid black;
             border-radius: 10px;
             font-size: 1.5em;
-            margin: 1.5em 2em;
+            margin: 1.4em 2em;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -81,7 +81,7 @@
                 display: flex;
                 flex-direction: column;
                 .title {
-                    font-size: 1.5em;
+                    font-size: 1.6em;
                     font-weight: 600;
                     margin: 0.5em;
                     text-align: center;
@@ -95,8 +95,8 @@
                     .logoFront,
                     .logoBack,
                     .logoTools {
-                        width: 6em;
-                        height: 6em;
+                        width: 5em;
+                        height: 5em;
                         margin: 1em;
                     }
                 }
