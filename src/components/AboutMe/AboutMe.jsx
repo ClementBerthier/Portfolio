@@ -132,7 +132,7 @@ export const AboutMe = () => {
                                         content={logo.name}
                                         trigger={
                                             <img
-                                                className="logoBack"
+                                                className={`logoBack ${logo.name}`}
                                                 src={logo.path}
                                                 alt={logo.name}
                                             />

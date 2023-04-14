@@ -2,7 +2,7 @@ import { projects } from "../../assets/data/projects";
 import { Carousel } from "react-responsive-carousel";
 import "../../styles/Projects.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Button } from "semantic-ui-react";
+//import { Button } from "semantic-ui-react";
 import { useState } from "react";
 
 export const Projects = () => {
