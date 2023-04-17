@@ -11,14 +11,14 @@
         line-height: 4em;
         font-weight: 500;
         margin: 2em 3em;
-        height: 40em;
 
         .img-container {
             display: flex;
             align-items: center;
             .portrait {
                 border-radius: 50%;
-                height: 35em;
+                height: clamp(10em, 28vw, 40em);
+                padding-bottom: 0.5em;
             }
         }
 
@@ -35,7 +35,6 @@
 
         .timeline {
             width: 30%;
-            height: 25em;
             border: 2px solid black;
             display: flex;
             flex-direction: column;
@@ -43,7 +42,7 @@
             text-align: center;
             border-radius: 10px;
 
-            font-size: 2em;
+            font-size: clamp(1em, 1.5vw, 2em);
             margin: 1em 2em;
 
             background-color: white;
@@ -65,7 +64,6 @@
 
         .skills {
             width: 70%;
-            height: 33.2em;
             border: 2px solid black;
             border-radius: 10px;
             font-size: 1.5em;
@@ -95,8 +93,8 @@
                     .logoFront,
                     .logoBack,
                     .logoTools {
-                        width: 5em;
-                        height: 5em;
+                        width: 6vh;
+                        height: 6vh;
                         margin: 1em;
                     }
                 }
