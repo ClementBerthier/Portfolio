@@ -32,7 +32,7 @@
         position: absolute;
         top: 20em;
         right: 0em;
-        width: 3vw;
+        width: 8em;
         height: 4%;
         border-radius: 10%;
         background-color: #e4dccf;
@@ -87,8 +87,7 @@
         align-items: center;
         flex-direction: column;
         .title {
-            display: inline-block;
-            font-size: 10em;
+            font-size: 5vw;
             font-weight: 700;
             color: vars.$color-home-text;
             margin-bottom: 1vw;
@@ -97,8 +96,7 @@
             animation: vars.$animation-slide-left-home;
         }
         .subtitle {
-            display: inline-block;
-            font-size: 8em;
+            font-size: 4vw;
             font-weight: 400;
             color: vars.$color-home-text;
             margin-bottom: 1vw;
@@ -106,8 +104,7 @@
             animation: vars.$animation-slide-right-home;
         }
         .description {
-            display: inline-block;
-            font-size: 3.6em;
+            font-size: 1.6vw;
             font-weight: 400;
             color: vars.$color-home-text;
             margin-bottom: 1vw;
