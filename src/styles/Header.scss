@@ -6,7 +6,7 @@
     flex-direction: row;
     justify-content: center;
     background-color: vars.$background-color-header;
-    height: 6vh;
+    height: 7em;
     gap: 10vw;
     animation: slide-down 1s ease-in-out;
     transition: background-color 0.5s ease-in-out;
@@ -45,16 +45,101 @@
             transform: scale(1.5);
         }
     }
-}
-
-.header:hover {
-    background-color: vars.$background-color-header-hover;
-    transition: background-color 0.5s ease-in-out;
-    .link {
-        color: vars.$color-header-link-hover;
+    .burger-button {
+        display: none;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: transparent;
     }
 }
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: -100vw;
+        bottom: 0;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        z-index: 1;
+
+        .logo-container {
+            .logo {
+                height: 10vh;
+            }
+        }
+
+        .link-container {
+            flex-direction: column;
+            align-items: center;
+
+            .link {
+                position: relative;
+                font-size: 2em;
+                color: white;
+            }
+        }
+        .burger-button {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            margin: 1.5em;
+            .burger-bar,
+            .burger-bar::before,
+            .burger-bar::after {
+                display: block;
+                width: 4em;
+                height: 0.5em;
+                position: relative;
+                border-radius: 3px;
+                background-color: white;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .burger-bar::before,
+            .burger-bar::after {
+                content: "";
+                position: absolute;
+                left: 0;
+            }
+
+            .burger-bar::before {
+                transform: translateY(-12px);
+            }
+
+            .burger-bar::after {
+                transform: translateY(12px);
+            }
+
+            .open {
+                background-color: transparent;
+                width: 0;
+            }
+            .open::before {
+                transform: rotate(45deg);
+            }
+            .open::after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .burger-button:hover {
+            cursor: pointer;
+        }
+    }
+
+    .showNav {
+        right: 0;
+        width: 100vw;
+        visibility: visible;
+    }
 }

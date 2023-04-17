@@ -6,7 +6,8 @@ import { Context } from "../Context/Context.jsx";
 
 export const Header = () => {
     const { context, setContext } = useContext(Context);
-    const [isHovered, setIsHovered] = useState(false);
+
+    const [openBurger, setOpenBurger] = useState(false);
 
     const hidden = context.loaderFinish ? "" : "hidden";
 
@@ -23,14 +24,18 @@ export const Header = () => {
         setContext({ ...context, binderId: Number(id) });
     };
 
+    const handleShowBurger = () => {
+        setOpenBurger(!openBurger);
+    };
+    console.log("openBurger", openBurger);
     return (
         <header
-            className={`header + ${hidden}`}
+            className={`header ${hidden} ${openBurger ? "showNav" : "hideNav"}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
             <div className="logo-container">
-                {isHovered ? (
+                {openBurger ? (
                     <img
                         className="logo"
                         src="/images/logoheadHovered.png"
@@ -58,6 +63,11 @@ export const Header = () => {
                     Contact
                 </a>
             </div>
+            <button className={`burger-button`} onClick={handleShowBurger}>
+                <span
+                    className={`burger-bar ${openBurger ? "open" : "close"}`}
+                ></span>
+            </button>
         </header>
     );
 };
