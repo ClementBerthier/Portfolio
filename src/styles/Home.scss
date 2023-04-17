@@ -71,7 +71,6 @@
             font-weight: 500;
         }
     }
-
     .option-content {
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
@@ -86,28 +85,29 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        white-space: nowrap;
         .title {
-            font-size: 5vw;
+            font-size: clamp(3em, 6vw, 12em);
             font-weight: 700;
             color: vars.$color-home-text;
-            margin-bottom: 1vw;
+            margin-bottom: 0.2em;
             opacity: 0;
             animation: vars.$animation-appear-home;
             animation: vars.$animation-slide-left-home;
         }
         .subtitle {
-            font-size: 4vw;
+            font-size: clamp(3em, 6vw, 10em);
             font-weight: 400;
             color: vars.$color-home-text;
-            margin-bottom: 1vw;
+            margin-bottom: 0.2em;
             opacity: 0;
             animation: vars.$animation-slide-right-home;
         }
         .description {
-            font-size: 1.6vw;
+            font-size: clamp(1em, 3vw, 4em);
             font-weight: 400;
             color: vars.$color-home-text;
-            margin-bottom: 1vw;
+            margin-bottom: 0.2em;
             opacity: 0;
             animation: vars.$animation-slide-right-home;
         }
@@ -128,4 +128,30 @@
     background-color: #e4dccf;
     transform: translate(-65%, -50%) rotate(45deg);
     z-index: -15;
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        justify-content: center;
+        .home-container {
+            .title {
+                font-size: clamp(5em, 14vw, 16em);
+                margin-bottom: 2em;
+                .title-span {
+                    display: none;
+                }
+            }
+            .subtitle {
+                font-size: clamp(2em, 7vw, 10em);
+                margin-bottom: 4em;
+            }
+            .description {
+                font-size: clamp(1em, 4vw, 5em);
+                margin-bottom: 2em;
+            }
+        }
+        .option-container {
+            display: none;
+        }
+    }
 }

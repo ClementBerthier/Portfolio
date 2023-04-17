@@ -152,7 +152,8 @@ export const Home = () => {
 
             <div className={`home-container ${hidden}`}>
                 <h1 ref={titleRef} className="title">
-                    Bienvenue sur mon Portfolio
+                    Bienvenue{" "}
+                    <span className="title-span">sur mon Portfolio</span>
                 </h1>
                 <h2 ref={subtitleRef} className="subtitle">
                     Je suis Clément Berthier
