@@ -12,15 +12,15 @@
     .trigger-container {
         .trigger {
             position: absolute;
-            top: calc(50% - 20em);
-            left: calc(50% - 25em);
+            top: calc(50% - 15vw);
+            left: calc(50% - 15vw);
+
             background-color: vars.$background-color-trigger;
             border: none;
             opacity: 1;
 
             .logo {
-                width: 50em;
-                height: 40em;
+                width: 30vw;
             }
             .progressFull {
                 animation: progress-opacity 1s ease-in-out forwards;
