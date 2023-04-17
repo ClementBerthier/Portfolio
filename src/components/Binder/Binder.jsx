@@ -5,6 +5,8 @@ import { Contact } from "../Contact/Contact.jsx";
 import { Projects } from "../Projects/Projects.jsx";
 import { Context } from "../Context/Context.jsx";
 
+//TODO: binder tab pas de demarcation sur les bordure
+
 export const Binder = () => {
     const { context, setContext } = useContext(Context);
 

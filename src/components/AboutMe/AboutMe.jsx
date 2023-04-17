@@ -9,6 +9,8 @@ import "../../styles/modal_css.scss";
 import { useContext, useState } from "react";
 import { Context } from "../Context/Context.jsx";
 
+//TODO: resposive modal au fraise a revoir
+
 export const AboutMe = () => {
     const { context, setContext } = useContext(Context);
     const [open, setOpen] = useState(false);
