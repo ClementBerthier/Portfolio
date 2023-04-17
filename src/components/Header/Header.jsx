@@ -7,25 +7,25 @@ import { Context } from "../Context/Context.jsx";
 export const Header = () => {
     const { context, setContext } = useContext(Context);
 
-    const [openBurger, setOpenBurger] = useState(false);
-
     const hidden = context.loaderFinish ? "" : "hidden";
 
     const handleClick = (event) => {
         const id = event.target.id;
-        setContext({ ...context, binderId: Number(id) });
+        setContext({ ...context, binderId: Number(id), openBurger: false });
     };
 
     const handleShowBurger = () => {
-        setOpenBurger(!openBurger);
+        setContext({ ...context, openBurger: !context.openBurger });
     };
-    console.log("openBurger", openBurger);
+    console.log("openBurger", context.openBurger);
     return (
         <header
-            className={`header ${hidden} ${openBurger ? "showNav" : "hideNav"}`}
+            className={`header ${hidden} ${
+                context.openBurger ? "showNav" : "hideNav"
+            }`}
         >
             <div className="logo-container">
-                {openBurger ? (
+                {context.openBurger ? (
                     <img
                         className="logo"
                         src="/images/logoheadHovered.png"
@@ -40,7 +40,7 @@ export const Header = () => {
                 )}
             </div>
             <div className="link-container">
-                <a className="link" href="#home">
+                <a className="link" href="#home" onClick={handleClick}>
                     Accueil
                 </a>
                 <a className="link" href="#binder" id="1" onClick={handleClick}>
@@ -55,7 +55,9 @@ export const Header = () => {
             </div>
             <button className={`burger-button`} onClick={handleShowBurger}>
                 <span
-                    className={`burger-bar ${openBurger ? "open" : "close"}`}
+                    className={`burger-bar ${
+                        context.openBurger ? "open" : "close"
+                    }`}
                 ></span>
             </button>
         </header>
