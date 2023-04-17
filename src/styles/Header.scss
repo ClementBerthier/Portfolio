@@ -4,18 +4,19 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     background-color: vars.$background-color-header;
     height: 7em;
-    gap: 10vw;
     animation: slide-down 1s ease-in-out;
     transition: background-color 0.5s ease-in-out;
+    white-space: nowrap;
 
     .logo-container {
         display: flex;
         align-items: center;
+
         .logo {
-            height: 7vh;
+            height: 10em;
             opacity: 0;
             animation: appear 0.7s ease-in-out 1s forwards;
         }
@@ -25,15 +26,15 @@
         position: relative;
         display: flex;
         flex-direction: row;
-        align-items: center;
-        gap: 10em;
-        font-size: 1.4vh;
-        padding: 0 2vw;
+        justify-content: center;
+        gap: clamp(3em, 8vw, 15em);
+        font-size: 1.4em;
+
         opacity: 0;
         animation: slide-left 0.7s ease-in-out 1s forwards;
 
         .link {
-            font-size: 1.2vw;
+            font-size: 1.8em;
             font-weight: 500;
             font-family: vars.$font-family-header;
             color: vars.$color-header-link;
@@ -82,6 +83,7 @@
             align-items: center;
 
             .link {
+                border-bottom: 1px solid white;
                 position: relative;
                 font-size: 2em;
                 color: white;

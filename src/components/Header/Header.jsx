@@ -11,14 +11,6 @@ export const Header = () => {
 
     const hidden = context.loaderFinish ? "" : "hidden";
 
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
-
     const handleClick = (event) => {
         const id = event.target.id;
         setContext({ ...context, binderId: Number(id) });
@@ -31,8 +23,6 @@ export const Header = () => {
     return (
         <header
             className={`header ${hidden} ${openBurger ? "showNav" : "hideNav"}`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
         >
             <div className="logo-container">
                 {openBurger ? (
