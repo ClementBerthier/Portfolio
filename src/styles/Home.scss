@@ -144,10 +144,12 @@
             .subtitle {
                 font-size: clamp(2em, 7vw, 10em);
                 margin-bottom: 4em;
+                font-weight: 500;
             }
             .description {
                 font-size: clamp(1em, 4vw, 5em);
                 margin-bottom: 2em;
+                font-weight: 500;
             }
         }
         .option-container {
