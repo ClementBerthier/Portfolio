@@ -1,5 +1,4 @@
 .binder {
-    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +39,7 @@
             }
 
             .selected {
-                background-color: #159895;
+                background-color: #157ba3;
             }
         }
         .binder-tab > * {
@@ -55,7 +54,6 @@
 
         .info-container {
             background-color: #273d57;
-            width: 100%;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             border-bottom-left-radius: 15px;
