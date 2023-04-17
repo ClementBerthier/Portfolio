@@ -60,3 +60,27 @@
         }
     }
 }
+
+@media screen and (max-width: 948px) {
+    .binder {
+        .binder-container {
+            flex-direction: column;
+            .binder-tab {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+
+                .text {
+                    left: 0;
+                    transform: rotate(0deg);
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .binder-tab > * {
+                margin-right: 0;
+                clip-path: none;
+            }
+        }
+    }
+}
