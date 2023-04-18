@@ -148,6 +148,11 @@
 
 @media screen and (max-width: 450px) {
     .aboutMe {
+        .presentation {
+            .description {
+                font-size: clamp(1em, 3.5vw, 4em);
+            }
+        }
         .bottom-container {
             .skills {
                 height: 70%;
