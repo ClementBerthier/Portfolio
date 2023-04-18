@@ -1,5 +1,5 @@
 .footer {
-    height: 16vh;
+    height: clamp(10em, 40vw, 25em);
     background-color: #273d57;
     color: #fff;
     display: flex;
@@ -14,41 +14,52 @@
         .box-top {
             font-size: 3em;
             display: flex;
-            justify-content: space-around;
             align-items: center;
-            gap: 30vw;
+            gap: clamp(2em, 15vw, 20em);
             border-bottom: 1px solid #fff;
             padding: 1em;
 
             .return {
                 .arrowUp {
-                    width: 2em;
-                    height: 2em;
+                    width: clamp(1em, 1vw, 4em);
+                    height: clamp(1em, 1vw, 4em);
                     cursor: pointer;
                 }
             }
 
-            .myname {
-                font-size: 1.5em;
+            .myName {
+                position: relative;
+                left: 4.4%;
+                font-size: clamp(0.5em, 2vw, 4em);
+                white-space: nowrap;
             }
 
             .link {
                 .logo-container {
                     display: flex;
                     justify-content: center;
-                    gap: 1em;
+                    gap: clamp(0.5em, 2vw, 2em);
                     .logo {
-                        width: 2em;
-                        height: 2em;
+                        width: clamp(1em, 1vw, 4em);
+                        height: clamp(1em, 1vw, 4em);
                     }
                 }
             }
         }
         .copyright {
-            font-size: 1.5em;
+            font-size: clamp(0.5em, 2vw, 2em);
             text-align: center;
 
-            margin: 2vh 0;
+            margin: 2em 0;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer {
+        height: clamp(3em, 40vw, 15em);
+        .return {
+            display: none;
         }
     }
 }

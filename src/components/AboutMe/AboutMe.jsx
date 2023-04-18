@@ -32,17 +32,17 @@ export const AboutMe = () => {
                 </div>
                 <div className="description">
                     <p>
-                        Je suis un développeur Web à la recherche d'une
+                        Je suis un développeur web à la recherche d'une
                         alternance en tant que concepteur/développeur
                         d'applications. Je suis passionné par les sciences et la
                         technologie, mais surtout curieux d'apprendre de
                         nouvelles choses. J'ai de l'expérience en Frontend et
-                        Backend où j'ai pu travailler en autonomie comme en
-                        équipe. J'ai aussi de l'expérience en gestion de projet.
-                        Si vous cherchez quelqu'un d'enthousiaste et toujours
-                        prêt à relever de nouveaux défis, je serais ravi de
-                        pouvoir échanger avec vous et vous rencontrer. N'hésitez
-                        pas à me{" "}
+                        Backend où j'ai pu travailler aussi bien en autonomie
+                        qu'en équipe. J'ai également de l'expérience en gestion
+                        de projet. Si vous cherchez quelqu'un d'enthousiaste et
+                        toujours prêt à relever de nouveaux défis, je serais
+                        ravi de pouvoir échanger avec vous et de vous
+                        rencontrer. N'hésitez pas à me{" "}
                         <a
                             href="/#binder"
                             id="3"
