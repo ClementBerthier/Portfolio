@@ -132,6 +132,10 @@ button.control-arrow.control-prev::before {
         flex-direction: column;
         justify-content: center;
 
+        .info-container {
+            display: none !important;
+        }
+
         .info-container2 {
             max-width: 55%;
             height: 19.5em;
@@ -161,7 +165,7 @@ button.control-arrow.control-prev::before {
             }
             .description {
                 font-family: Merriweather, sans-serif;
-                line-height: 1.3em;
+                line-height: 2em;
             }
         }
 
