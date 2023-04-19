@@ -9,4 +9,5 @@ html {
 body {
     height: 100svh;
     background-color: vars.$background-color-global;
+    overflow-x: hidden;
 }
