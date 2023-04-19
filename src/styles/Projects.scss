@@ -14,10 +14,11 @@
         height: 80em;
         display: flex;
         align-items: center;
+
         .image-container {
             position: relative;
             margin-right: 0;
-            width: 70%;
+            max-width: 70%;
             right: -15%;
 
             .image-project {
@@ -47,7 +48,7 @@
                     border-bottom: 1px solid #000000;
                     .info-title,
                     .number {
-                        font-size: clamp(1.5em, 4vw, 3em);
+                        font-size: clamp(1.5em, 3.5vw, 3em);
                         font-family: Montserrat, sans-serif;
                         font-weight: 800;
                         text-align: start;
@@ -68,6 +69,10 @@
                 display: none;
             }
         }
+
+        .info-container2 {
+            display: none;
+        }
     }
 
     .seeMore {
@@ -85,8 +90,7 @@
     height: 0%;
     width: 0%;
     left: 90%;
-    top: 50%;
-    margin-top: 10.55em !important;
+    margin-top: clamp(1em, 14.1vw, 30em) !important;
 
     &:hover {
         background-color: transparent !important;
@@ -94,7 +98,7 @@
 }
 
 .carousel .control-prev.control-arrow {
-    left: 7.8% !important;
+    left: 8.4% !important;
 }
 
 .carousel .control-next.control-arrow:before {
@@ -107,6 +111,57 @@
     transform: scale(3);
 }
 
+button.control-arrow.control-prev::before {
+    position: absolute;
+    right: 0%;
+    top: 120%;
+}
+
 .control-arrow.control-next {
     position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel.carousel-slider .control-arrow {
+        display: none;
+    }
+
+    .carousel-container {
+        height: 60em !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .info-container2 {
+            max-width: 70%;
+            height: 19.5em;
+            display: flex !important;
+            flex-direction: column;
+
+            margin: 3em auto;
+
+            background-color: rgba(228, 223, 223, 0.651);
+            color: #000000;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+
+            /* .title-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid #000000;
+                margin: 0;
+                padding: 0 1em;
+                .info-title,
+                .number {
+                    font-family: Montserrat, sans-serif;
+                    font-weight: 800;
+                }
+            }
+            .description {
+                font-family: Merriweather, sans-serif;
+            } */
+        }
+    }
 }

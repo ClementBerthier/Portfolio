@@ -26,41 +26,56 @@ export const Projects = () => {
             <div className="carousel-container">
                 <Carousel showThumbs={false} showIndicators={false}>
                     {projects.map((project) => (
-                        <div
-                            className="image-container"
-                            key={project.id}
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <img
-                                className="image-project"
-                                src={project.path}
-                                alt={project.name}
-                            />
-                            <a
-                                href={project.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                        <>
+                            <div
+                                className="image-container"
+                                key={project.id}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
                             >
-                                <div
-                                    className={`info-container ${
-                                        !mouseEnter ? "hidden" : ""
-                                    }`}
+                                <img
+                                    className="image-project"
+                                    src={project.path}
+                                    alt={project.name}
+                                />
+                                <a
+                                    href={project.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
-                                    <div className="title-container">
-                                        <h3 className="info-title">
-                                            {project.name}
-                                        </h3>
-                                        <span className="number">
-                                            {project.id}/{projects.length}
-                                        </span>
+                                    <div
+                                        className={`info-container ${
+                                            !mouseEnter ? "hidden" : ""
+                                        }`}
+                                    >
+                                        <div className="title-container">
+                                            <h3 className="info-title">
+                                                {project.name}
+                                            </h3>
+                                            <span className="number">
+                                                {project.id}/{projects.length}
+                                            </span>
+                                        </div>
+                                        <div className="description">
+                                            <p>{project.description}</p>
+                                        </div>
                                     </div>
-                                    <div className="description">
-                                        <p>{project.description}</p>
-                                    </div>
+                                </a>
+                            </div>
+                            <div className="info-container2">
+                                <div className="title-container">
+                                    <h3 className="info-title">
+                                        {project.name}
+                                    </h3>
+                                    <span className="number">
+                                        {project.id}/{projects.length}
+                                    </span>
                                 </div>
-                            </a>
-                        </div>
+                                <div className="description">
+                                    <p>{project.description}</p>
+                                </div>
+                            </div>
+                        </>
                     ))}
                 </Carousel>
             </div>
