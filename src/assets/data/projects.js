@@ -1,7 +1,7 @@
 export const projects = [
     {
         id: 1,
-        name: "Jeu de carte Kaamelott",
+        name: "Mon Portfolio",
         path: "/images/projects/space4.png",
         url: "https://nodejs.org/en",
         description:
@@ -10,39 +10,17 @@ export const projects = [
     },
     {
         id: 2,
-        name: "Node.js",
+        name: "Mon Portfolio",
         path: "/images/projects/space2.png",
-        url: "https://nodejs.org/en",
-        description:
-            "Ils chantent pas vos espions. Déjà à la corne, ils regardent même pas vers ici! Vous pouvez bien agiter tout les drapeaux que vous voudrez! Mais on en entend parler dans les tavernes à ivrognes! Voilà! Ben attendez, je vais vous rendre la vôtre.",
+        url: "https://portfolio-kohl-ten-27.vercel.app/",
+        description: "La premiere version de mon portfolio, réalisé en React",
     },
     {
         id: 3,
-        name: "Node.js",
+        name: "MyAmiDice",
         path: "/images/projects/space3.png",
-        url: "https://nodejs.org/en",
+        url: "https://github.com/ClementBerthier/MyAmiDice",
         description:
-            "Y en a marre de se comporter comme des sagouins avec tout le monde sous prétexte qu’on a des responsabilités. Mais… C’est le Chevalier de Provence ou le Chevalier Gaulois? Faudrait savoir! N’empêche que tout le monde parle de moi! C’est quand même un signe! Non mais n’exagérez pas non plus! J’vous demande quand même pas de manger des briques!",
-    },
-    {
-        id: 4,
-        name: "Node.js",
-        path: "/images/projects/space3.png",
-        url: "https://nodejs.org/en",
-        description: "tantan elle fait des flan",
-    },
-    {
-        id: 5,
-        name: "Node.js",
-        path: "/images/projects/space3.png",
-        url: "https://nodejs.org/en",
-        description: "LE PETIT POOOIIISSSOOOOOONNN",
-    },
-    {
-        id: 6,
-        name: "Node.js",
-        path: "/images/projects/space3.png",
-        url: "https://nodejs.org/en",
-        description: "Parfois on a pas le choix, faut sacrifier les jeunes",
+            "MyAmiDice est un projet de fin de formation réalisé en équipe de 5 personnes (2 front-end, 3 back-end). Ce projet est une plateforme de jeu de rôle en ligne permettant à un groupe de joueurs de réaliser une partie de jeu de rôle sur une interface dédiée.",
     },
 ];
