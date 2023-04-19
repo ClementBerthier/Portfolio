@@ -133,10 +133,11 @@ button.control-arrow.control-prev::before {
         justify-content: center;
 
         .info-container2 {
-            max-width: 70%;
+            max-width: 55%;
             height: 19.5em;
             display: flex !important;
             flex-direction: column;
+            justify-content: space-around;
 
             margin: 3em auto;
 
@@ -146,13 +147,12 @@ button.control-arrow.control-prev::before {
             border-bottom-right-radius: 15px;
             border-bottom-left-radius: 15px;
 
-            /* .title-container {
+            .title-container {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-around;
                 border-bottom: 1px solid #000000;
                 margin: 0;
-                padding: 0 1em;
                 .info-title,
                 .number {
                     font-family: Montserrat, sans-serif;
@@ -161,7 +161,13 @@ button.control-arrow.control-prev::before {
             }
             .description {
                 font-family: Merriweather, sans-serif;
-            } */
+                line-height: 1.3em;
+            }
+        }
+
+        .image-container {
+            max-width: 55% !important;
+            right: -22.5% !important;
         }
     }
 }
