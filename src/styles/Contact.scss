@@ -59,6 +59,8 @@
             color: vars.$color-contact;
             font-size: 2em;
             margin-bottom: 1em;
+            font-family: vars.$font-family-texts;
+            line-height: 1.5em;
         }
         button {
             width: clamp(5em, 20vw, 10em);
