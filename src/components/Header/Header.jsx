@@ -37,7 +37,7 @@ export const Header = () => {
                 )}
             </div>
             <div className="link-container">
-                <a className="link" href="#home" onClick={handleClick}>
+                <a className="link" href="#home" id="0" onClick={handleClick}>
                     Accueil
                 </a>
                 <a className="link" href="#binder" id="1" onClick={handleClick}>
