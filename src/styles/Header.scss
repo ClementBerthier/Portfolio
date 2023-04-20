@@ -99,9 +99,8 @@
                 height: 0.5em;
                 position: relative;
                 border-radius: 3px;
-                background-color: vars.$color-header-link-burger;
+                background-color: vars.$background-color-cross;
                 transition: all 0.3s ease-in-out;
-                color: vars.$dark-blue;
             }
 
             .burger-bar::before,
