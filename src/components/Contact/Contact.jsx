@@ -23,18 +23,19 @@ export const Contact = () => {
             return;
         }
 
-        const formData = new FormData();
-        formData.append("name", formState.name);
-        formData.append("email", formState.email);
-        formData.append("message", formState.message);
-
         try {
             const response = await fetch(
-                "https://formsubmit.co/berthierclementdev@gmail.com",
+                "https://formsubmit.co/ajax/berthierclementdev@gmail.com",
                 {
                     method: "POST",
-                    body: formData,
+                    body: JSON.stringify({
+                        name: formState.name,
+                        email: formState.email,
+                        message: formState.message,
+                    }),
+
                     headers: {
+                        "Content-Type": "application/json",
                         Accept: "application/json",
                     },
                 }
