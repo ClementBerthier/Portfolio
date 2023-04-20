@@ -35,7 +35,7 @@ export const Contact = () => {
             );
 
             if (response.ok) {
-                console.log("ok");
+                console.log(response);
             } else {
                 console.log("not ok");
             }

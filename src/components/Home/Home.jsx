@@ -83,8 +83,6 @@ export const Home = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentV]);
 
-    console.log("showProgress", showProgress);
-
     return (
         <section className="home" id="home" onMouseMove={handleMouseMove}>
             <div className="trigger-container">
