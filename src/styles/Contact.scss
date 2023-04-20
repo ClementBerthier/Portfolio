@@ -11,9 +11,12 @@
     border-bottom-left-radius: 15px;
 
     .title {
-        font-size: 5em;
+        font-size: clamp(3em, 5vw, 5em);
+
+        font-weight: 500;
         margin: 1em;
         color: vars.$color-contact;
+        font-family: vars.$font-family-titles;
     }
 
     .form-container {
@@ -33,6 +36,7 @@
                 .label-message {
                     font-size: 2.5em;
                     color: vars.$color-contact;
+                    font-family: vars.$font-family-titles;
                 }
             }
         }
@@ -43,7 +47,8 @@
             font-size: 2em;
             border: 1px solid #ccc;
             border-radius: 5px;
-            margin-bottom: 1em;
+            margin: 0.5em 0 1em 0;
+
             background-color: vars.$background-color-contact-form;
         }
         textarea {
