@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: vars.$font-familly-home;
+    font-family: vars.$font-family-titles;
 
     .trigger-container {
         .trigger {
@@ -23,7 +23,7 @@
                 width: 50vw;
             }
             .progressFull {
-                animation: progress-opacity 1s ease-in-out forwards;
+                animation: vars.$progress-opacity;
             }
         }
     }
@@ -35,14 +35,14 @@
         width: 8em;
         height: 5em;
         border-radius: 10%;
-        background-color: #e4dccf;
+        background-color: vars.$background-color-option-container;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         transition: width 0.3s ease-in-out;
-        color: #000000;
+        color: vars.$color-home-option;
         z-index: 0;
 
         .title {
@@ -56,7 +56,7 @@
         height: 30em;
         justify-content: flex-start;
         align-items: center;
-        animation: boxup 0.5s ease-in-out forwards;
+        animation: vars.$boxup;
         z-index: 10;
 
         .title {
@@ -94,8 +94,8 @@
             color: vars.$color-home-text;
             margin-bottom: 0.2em;
             opacity: 0;
-            animation: vars.$animation-appear-home;
-            animation: vars.$animation-slide-left-home;
+            animation: vars.$appear;
+            animation: vars.$slide-left;
         }
         .subtitle {
             font-size: clamp(3em, 6vw, 10em);
@@ -103,7 +103,7 @@
             color: vars.$color-home-text;
             margin-bottom: 0.2em;
             opacity: 0;
-            animation: vars.$animation-slide-right-home;
+            animation: vars.$slide-right;
         }
         .description {
             font-size: clamp(1em, 3vw, 4em);
@@ -111,7 +111,7 @@
             color: vars.$color-home-text;
             margin-bottom: 0.2em;
             opacity: 0;
-            animation: vars.$animation-slide-right-home;
+            animation: vars.$slide-right;
         }
     }
 
@@ -127,9 +127,15 @@
     left: 100em;
     width: 1800rem;
     height: 50vh;
-    background-color: #e4dccf;
+    background-color: vars.$background-color-home-before;
     transform: translate(-65%, -50%) rotate(45deg);
     z-index: -1;
+}
+
+@media screen and (max-width: 1005px) {
+    .option-container {
+        background-color: vars.$background-color-option-container-dark !important;
+    }
 }
 
 @media screen and (max-width: 768px) {

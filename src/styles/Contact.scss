@@ -1,5 +1,7 @@
+@use "../styles/vars" as vars; // import des variables css
+
 .contact {
-    background-color: #273d57;
+    background-color: vars.$background-color-contact;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +13,7 @@
     .title {
         font-size: 5em;
         margin: 1em;
-        color: #ffffff;
+        color: vars.$color-contact;
     }
 
     .form-container {
@@ -30,7 +32,7 @@
                 .label-email,
                 .label-message {
                     font-size: 2.5em;
-                    color: #ffffff;
+                    color: vars.$color-contact;
                 }
             }
         }
@@ -42,13 +44,14 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-bottom: 1em;
+            background-color: vars.$background-color-contact-form;
         }
         textarea {
             resize: none;
         }
 
         .isSend {
-            color: white;
+            color: vars.$color-contact;
             font-size: 2em;
             margin-bottom: 1em;
         }
@@ -56,15 +59,16 @@
             width: clamp(5em, 20vw, 10em);
             padding: 0.5em;
             font-size: 2em;
-            color: #fff;
-            background-color: #007bff;
+            color: vars.$color-contact;
+            background-color: vars.$backgrouns-color-button;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.2s ease;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: vars.$backgrouns-color-button-hover;
+            color: vars.$color-contact-button-hover;
         }
     }
 }

@@ -1,10 +1,12 @@
+@use "../styles/vars" as vars; // import des variables css
+
 .footer {
     height: clamp(10em, 40vw, 25em);
     background-color: #273d57;
-    color: #fff;
+    color: vars.$color-footer;
     display: flex;
     align-items: center;
-    font-family: Montserrat, sans-serif;
+    font-family: vars.$font-family-titles;
 
     .box {
         width: 100%;
@@ -16,7 +18,7 @@
             display: flex;
             align-items: center;
             gap: clamp(2em, 15vw, 20em);
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid vars.$color-footer;
             padding: 1em;
 
             .return {
@@ -32,6 +34,7 @@
                 left: 4.4%;
                 font-size: clamp(0.5em, 2vw, 4em);
                 white-space: nowrap;
+                color: vars.$color-footer;
             }
 
             .link {

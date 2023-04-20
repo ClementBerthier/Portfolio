@@ -1,3 +1,5 @@
+@use "../styles/vars" as vars; // import des variables css
+
 .binder {
     display: flex;
     justify-content: center;
@@ -39,11 +41,11 @@
             }
 
             .selected {
-                background-color: #157ba3;
+                background-color: vars.$background-color-binder-selected;
             }
         }
         .binder-tab > * {
-            background-color: #159895;
+            background-color: vars.$background-color-binder-tab;
             width: 100%;
             height: 20%;
             display: flex;
@@ -57,7 +59,7 @@
         }
 
         .info-container {
-            background-color: #273d57;
+            background-color: vars.$background-color-binder-info-container;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             border-bottom-left-radius: 15px;

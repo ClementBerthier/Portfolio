@@ -1,3 +1,5 @@
+@use "../styles/vars" as vars; // import des variables css
+
 .projects {
     .title-container {
         height: 20%;
@@ -7,6 +9,8 @@
         .title {
             font-weight: 800;
             font-size: clamp(3em, 5vw, 5em);
+            color: vars.$color-projects-title;
+            font-family: vars.$font-family-titles;
         }
     }
 
@@ -49,13 +53,13 @@
                     .info-title,
                     .number {
                         font-size: clamp(1.5em, 3.5vw, 3em);
-                        font-family: Montserrat, sans-serif;
+                        font-family: vars.$font-family-titles;
                         font-weight: 800;
                         text-align: start;
                     }
                 }
                 .description {
-                    font-family: Merriweather, sans-serif;
+                    font-family: vars.$font-family-texts;
                     line-height: 1.3em;
                     height: 100%;
                     font-size: clamp(1em, 2vw, 2em);
@@ -145,7 +149,7 @@ button.control-arrow.control-prev::before {
 
             margin: 3em auto;
 
-            background-color: rgba(228, 223, 223, 0.651);
+            background-color: vars.$background-color-projects-info-container2;
             color: #000000;
             border-top-left-radius: 15px;
             border-bottom-right-radius: 15px;
@@ -159,12 +163,12 @@ button.control-arrow.control-prev::before {
                 margin: 0;
                 .info-title,
                 .number {
-                    font-family: Montserrat, sans-serif;
+                    font-family: vars.$font-family-titles;
                     font-weight: 800;
                 }
             }
             .description {
-                font-family: Merriweather, sans-serif;
+                font-family: vars.$font-family-texts;
                 line-height: 2em;
             }
         }

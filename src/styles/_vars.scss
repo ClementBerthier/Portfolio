@@ -1,36 +1,78 @@
 //Ensemble des variables css du site.
 
+/*----------------COLORS----------------*/
+$beige: #f1ece1;
+$dark-beige: #e6d9c9;
+$blue-green: #6ea8b3;
+$dark-blue: #273d57;
+$blue-sky: #94b7d4;
+$dark-blue-sky: #238db8;
+$black: #000;
+$white: #fff;
+$transparent: transparent;
+
+/*----------------ANIMATION----------------*/
+$appear: appear 0.7s ease-in-out 1s forwards;
+$boxup: boxup 0.5s ease-in-out forwards;
+$progress-opacity: progress-opacity 1s ease-in-out forwards;
+$slide-left: slide-left 0.7s ease-in-out 1s forwards;
+$slide-right: slide-right 0.7s ease-in-out 1s forwards;
+
+/*----------------FONT----------------*/
+$font-family-titles: MontSerrat, sans-serif;
+$font-family-texts: Merriweather, sans-serif;
+
 /*----------------GLOBAL----------------*/
 
-$background-color-global: #6ebdb2;
+$background-color-global: $blue-green;
 
 /*----------------HEADER----------------*/
 
-$background-color-header: #ea545400;
-$background-color-header-hover: #273d57;
+$background-color-header: $dark-blue;
 
-$color-header-link: #000;
-$color-header-link-hover: #f9f5eb;
-$font-family-header: Montserrat, serif;
-
-$aniamtion-appear-header: appear 0.7s ease-in-out 1s forwards;
-$animation-font-size-up-header: font-size-up-header 0.3s ease-in-out forwards;
+$color-header-link: $black;
+$color-header-link-burger: $beige;
 
 /*----------------HOME----------------*/
-$background-color-home: transparent;
-$background-color-trigger: transparent;
+$background-color-home: $transparent;
+$background-color-home-before: $beige;
+$background-color-option-container: $beige;
+$background-color-option-container-dark: $dark-beige;
+$background-color-trigger: $transparent;
 
-$color-home-text: #000;
-$color-home-button: #fff;
-$color-home-button-text: #000;
-$color-home-button-hover: #f4dfd0;
+$color-home-text: $black;
+$color-home-option: $black;
 
-$font-familly-home: MontSerrat, serif;
+/*----------------BINDER----------------*/
 
-$animation-appear-home: appear 0.7s ease-in-out 1s forwards;
-$animation-size-up-home: size-up 0.7s ease-in-out 0.2s forwards;
-$animation-slide-right-home: slide-right 0.7s ease-in-out 1s forwards;
-$animation-slide-left-home: slide-left 0.7s ease-in-out 1s forwards;
-$animation-font-size-up-home: font-size-up 0.3s ease-in-out forwards;
+$background-color-binder-tab: $blue-sky;
+$background-color-binder-selected: $dark-blue-sky;
+$background-color-binder-info-container: $dark-blue;
 
 /*----------------ABOUT ME----------------*/
+
+$background-color-aboutMe-box: $beige;
+$background-color-aboutMe-trigger-container: $blue-green;
+$background-color-aboutMe-trigger-container-hover: $blue-sky;
+
+$font-family-aboutMe: MontSerrat, sans-serif;
+
+/*----------------PROJECTS----------------*/
+
+$background-color-projects-info-container2: $blue-sky;
+
+$color-projects-title: $beige;
+
+/*----------------CONTACT----------------*/
+
+$background-color-contact: $dark-blue;
+$backgrouns-color-button: $dark-blue-sky;
+$backgrouns-color-button-hover: $blue-sky;
+$background-color-contact-form: $beige;
+
+$color-contact: $beige;
+$color-contact-button-hover: $dark-blue;
+
+/*----------------FOOTER----------------*/
+
+$color-footer: $beige;

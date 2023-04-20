@@ -25,7 +25,7 @@ export const Header = () => {
                 {context.openBurger ? (
                     <img
                         className="logo"
-                        src="/images/logoheadHovered.png"
+                        src="/images/logoheadbeige.png"
                         alt="logo"
                     />
                 ) : (

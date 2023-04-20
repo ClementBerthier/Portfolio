@@ -5,10 +5,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: vars.$background-color-header;
     height: 7em;
-    animation: slide-down 1s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
     white-space: nowrap;
 
     .logo-container {
@@ -18,7 +15,7 @@
         .logo {
             height: 10em;
             opacity: 0;
-            animation: appear 0.7s ease-in-out 1s forwards;
+            animation: vars.$appear;
         }
     }
 
@@ -31,12 +28,12 @@
         font-size: 1.4em;
 
         opacity: 0;
-        animation: slide-left 0.7s ease-in-out 1s forwards;
+        animation: vars.$slide-left;
 
         .link {
             font-size: 1.8em;
             font-weight: 500;
-            font-family: vars.$font-family-header;
+            font-family: vars.$font-family-titles;
             color: vars.$color-header-link;
             padding: 1em 0;
             transition: transform 0.3s ease-in-out;
@@ -68,8 +65,7 @@
         right: -100vw;
         bottom: 0;
         height: 100vh;
-        background-color: black;
-        color: white;
+        background-color: vars.$background-color-header;
         z-index: 1;
 
         .logo-container {
@@ -83,10 +79,10 @@
             align-items: center;
 
             .link {
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid vars.$color-header-link-burger;
                 position: relative;
                 font-size: 2em;
-                color: white;
+                color: vars.$color-header-link-burger;
             }
         }
         .burger-button {
@@ -103,7 +99,7 @@
                 height: 0.5em;
                 position: relative;
                 border-radius: 3px;
-                background-color: white;
+                background-color: vars.$color-header-link-burger;
                 transition: all 0.3s ease-in-out;
             }
 

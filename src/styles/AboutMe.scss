@@ -1,17 +1,19 @@
+@use "../styles/vars" as vars; // import des variables css
+
 .aboutMe {
     width: 100%;
-    font-family: Montserrat, serif;
 
     .presentation {
         display: flex;
         flex-direction: row;
-        background-color: white;
+        background-color: vars.$background-color-aboutMe-box;
         justify-content: space-around;
         align-items: center;
         border-radius: 10px;
         line-height: clamp(1.5em, 2vw, 4em);
         font-weight: 500;
         margin: 2em 3em;
+        font-family: vars.$font-family-texts;
 
         .img-container {
             display: flex;
@@ -46,20 +48,25 @@
             font-size: clamp(1em, 1.5vw, 2em);
             margin: 1em 2em;
 
-            background-color: white;
+            background-color: vars.$background-color-aboutMe-box;
             .trigger-container {
                 margin: 0.5em;
                 padding: 1em 0;
-                background-color: gray;
+                background-color: vars.$background-color-aboutMe-trigger-container;
                 border-radius: 10px;
                 cursor: pointer;
 
                 .time {
                     font-weight: 600;
+                    font-family: vars.$font-family-titles;
                 }
                 .description {
                     margin: 0.5em;
+                    font-family: vars.$font-family-texts;
                 }
+            }
+            .trigger-container:hover {
+                background-color: vars.$background-color-aboutMe-trigger-container-hover;
             }
             .modal-title {
                 font-size: clamp(1em, 1.5vw, 2.5em);
@@ -77,7 +84,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            background-color: white;
+            background-color: vars.$background-color-aboutMe-box;
 
             .frontend,
             .backend,
@@ -89,6 +96,7 @@
                     font-weight: 600;
                     margin: 0.5em;
                     text-align: center;
+                    font-family: vars.$font-family-titles;
                 }
 
                 .logo {
