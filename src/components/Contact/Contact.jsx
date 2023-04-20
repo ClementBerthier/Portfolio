@@ -14,22 +14,34 @@ export const Contact = () => {
     };
 
     // TODO: Mettre en place le captcha une fois le site en ligne (recatpcha google)
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         if (!emailValidation(formState.email)) {
             alert("Veuillez entrer une adresse email valide.");
             return;
         }
-        //TODO: faire le code d'envoie des donné a mon adresse email
-        console.log(
-            "Nom:",
-            formState.name,
-            "Email:",
-            formState.email,
-            "Message:",
-            formState.message
-        );
+
+        try {
+            const response = await fetch(
+                "https://formsubmit.co/berthierclementdev@gmail.com",
+                {
+                    method: "POST",
+                    body: JSON.stringify(formState),
+                    headers: {
+                        Accept: "application/json",
+                    },
+                }
+            );
+
+            if (response.ok) {
+                console.log("ok");
+            } else {
+                console.log("not ok");
+            }
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const handleChange = (event) => {
@@ -39,39 +51,53 @@ export const Contact = () => {
 
     return (
         <section className="contact" id="contact">
-            <h1>Contactez moi</h1>
-            <p></p>
+            <h1 className="title">Contactez moi</h1>
             <div className="form-container">
                 <form className="contact-form" onSubmit={handleSubmit}>
-                    <div className="name">
-                        <label htmlFor="name">Nom</label>
+                    <div className="name-container">
+                        <label className="label-name" htmlFor="name">
+                            Nom
+                        </label>
                         <input
+                            className="input-name"
+                            placeholder="Votre nom"
                             type="text"
                             name="name"
                             id="name"
                             onChange={handleChange}
                         />
                     </div>
-                    <div className="email">
-                        <label htmlFor="email">Email</label>
+                    <div className="email-container">
+                        <label className="label-email" htmlFor="email">
+                            Email
+                        </label>
                         <input
+                            className="input-email"
+                            placeholder="Votre email"
                             type="email"
                             name="email"
                             id="email"
                             onChange={handleChange}
                         />
                     </div>
-                    <div className="message">
-                        <label htmlFor="message">Message</label>
+                    <div className="message-container">
+                        <label className="label-email" htmlFor="message">
+                            Message
+                        </label>
                         <textarea
+                            className="input-message"
+                            placeholder="Votre message"
                             name="message"
                             id="message"
                             cols="30"
                             rows="10"
+                            maxLength={10000}
                             onChange={handleChange}
                         ></textarea>
                     </div>
-                    <button type="submit">Envoyer</button>
+                    <button className="submit" type="submit">
+                        Envoyer
+                    </button>
                 </form>
             </div>
         </section>

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import "../../styles/Header.scss";
 import { Context } from "../Context/Context.jsx";
 
