@@ -27,7 +27,7 @@ export const Contact = () => {
                 "https://formsubmit.co/berthierclementdev@gmail.com",
                 {
                     method: "POST",
-                    body: formState,
+                    body: { ...formState },
                     headers: {
                         Accept: "application/json",
                     },
