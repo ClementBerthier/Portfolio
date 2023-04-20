@@ -5,7 +5,7 @@ export const data = [
         description: "Alternance Concepteur/Développeur d'applications",
         role: "Concepteur/Développeur d'applications",
         school: "O'clock",
-        place: "Téleprésentiel & Entreprise",
+        place: "Téléprésentiel & Entreprise",
     },
     {
         id: 2,
