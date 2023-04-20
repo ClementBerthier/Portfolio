@@ -8,7 +8,7 @@ export const Contact = () => {
         message: "",
     });
 
-    console.log("3");
+    console.log("4");
     const emailValidation = (email) => {
         const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
         return regex.test(email);
