@@ -8,6 +8,7 @@ export const Contact = () => {
         message: "",
     });
 
+    console.log("2");
     const emailValidation = (email) => {
         const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
         return regex.test(email);
@@ -27,7 +28,7 @@ export const Contact = () => {
                 "https://formsubmit.co/berthierclementdev@gmail.com",
                 {
                     method: "POST",
-                    body: { ...formState },
+                    body: JSON.stringify(...formState),
                     headers: {
                         Accept: "application/json",
                     },
