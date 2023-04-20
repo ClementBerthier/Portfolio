@@ -15,7 +15,6 @@ export const Header = () => {
     const handleShowBurger = () => {
         setContext({ ...context, openBurger: !context.openBurger });
     };
-    console.log("openBurger", context.openBurger);
     return (
         <header
             className={`header ${hidden} ${

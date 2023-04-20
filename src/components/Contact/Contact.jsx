@@ -8,13 +8,15 @@ export const Contact = () => {
         message: "",
     });
 
-    console.log("4");
+    const [isSent, setIsSent] = useState(false);
+
     const emailValidation = (email) => {
         const regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
         return regex.test(email);
     };
 
     // TODO: Mettre en place le captcha une fois le site en ligne (recatpcha google)
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -40,9 +42,13 @@ export const Contact = () => {
                     },
                 }
             );
-
             if (response.ok) {
-                console.log(response);
+                setFormState({
+                    name: "",
+                    email: "",
+                    message: "",
+                });
+                setIsSent(true);
             } else {
                 console.log("not ok");
             }
@@ -70,6 +76,7 @@ export const Contact = () => {
                             placeholder="Votre nom"
                             type="text"
                             name="name"
+                            value={formState.name}
                             id="name"
                             onChange={handleChange}
                         />
@@ -83,6 +90,7 @@ export const Contact = () => {
                             placeholder="Votre email"
                             type="email"
                             name="email"
+                            value={formState.email}
                             id="email"
                             onChange={handleChange}
                         />
@@ -95,6 +103,7 @@ export const Contact = () => {
                             className="input-message"
                             placeholder="Votre message"
                             name="message"
+                            value={formState.message}
                             id="message"
                             cols="30"
                             rows="10"
@@ -102,6 +111,12 @@ export const Contact = () => {
                             onChange={handleChange}
                         ></textarea>
                     </div>
+                    {isSent ? (
+                        <p className="isSend">
+                            Merci, votre message a bien été envoyé. J'y
+                            repondrai dans les plus brefs delais
+                        </p>
+                    ) : null}
                     <button className="submit" type="submit">
                         Envoyer
                     </button>
