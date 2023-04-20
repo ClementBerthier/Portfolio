@@ -18,9 +18,16 @@ export const projects = [
     {
         id: 3,
         name: "MyAmiDice",
-        path: "/images/projects/space3.png",
+        path: "/images/projects/MyAmiDice.png",
         url: "https://github.com/ClementBerthier/MyAmiDice",
         description:
             "MyAmiDice est un projet de fin de formation réalisé en équipe de 5 personnes (2 front-end, 3 back-end). Ce projet est une plateforme de jeu de rôle en ligne permettant à un groupe de joueurs de réaliser une partie de jeu de rôle sur une interface dédiée.",
+    },
+    {
+        id: 4,
+        name: "OctoDiving",
+        path: "/images/projects/octodiving.png",
+        url: "https://www.octodiving.fr/",
+        description: "Site vitrine pour une entreprise de plongée sous-marine",
     },
 ];
