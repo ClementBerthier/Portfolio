@@ -86,43 +86,45 @@ export const Home = () => {
     return (
         <section className="home" id="home" onMouseMove={handleMouseMove}>
             <div className="trigger-container">
-                <button className={`trigger `}>
-                    {showProgress ? (
-                        <img
-                            className="logo"
-                            src="/images/logohead.png"
-                            alt="logo"
-                            style={{ opacity: currentV / 100 }}
-                        />
-                    ) : (
-                        <img
-                            className="logo"
-                            src="/images/logohead.png"
-                            alt="logo"
-                            style={{
-                                animation:
-                                    "progress-opacity 1s ease-in-out forwards",
-                            }}
-                        />
-                    )}
-                    {showProgress ? (
-                        <Progress
-                            className="progress"
-                            percent={Math.floor(currentV)}
-                            progress
-                            size="large"
-                            color="blue"
-                        />
-                    ) : (
-                        <Progress
-                            className="progressFull"
-                            percent={Math.floor(currentV)}
-                            progress
-                            size="large"
-                            color="blue"
-                        />
-                    )}
-                </button>
+                {!context.loaderFinish ? (
+                    <button className={`trigger `}>
+                        {showProgress ? (
+                            <img
+                                className="logo"
+                                src="/images/logohead.png"
+                                alt="logo"
+                                style={{ opacity: currentV / 100 }}
+                            />
+                        ) : (
+                            <img
+                                className="logo"
+                                src="/images/logohead.png"
+                                alt="logo"
+                                style={{
+                                    animation:
+                                        "progress-opacity 1s ease-in-out forwards",
+                                }}
+                            />
+                        )}
+                        {showProgress ? (
+                            <Progress
+                                className="progress"
+                                percent={Math.floor(currentV)}
+                                progress
+                                size="large"
+                                color="blue"
+                            />
+                        ) : (
+                            <Progress
+                                className="progressFull"
+                                percent={Math.floor(currentV)}
+                                progress
+                                size="large"
+                                color="blue"
+                            />
+                        )}
+                    </button>
+                ) : null}
             </div>
             {!showProgress ? (
                 <div
