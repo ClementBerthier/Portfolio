@@ -141,3 +141,12 @@
         visibility: visible;
     }
 }
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+    .header {
+        .link-container {
+            flex-direction: row;
+            font-size: 1.2em;
+        }
+    }
+}
