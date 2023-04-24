@@ -165,3 +165,30 @@
         }
     }
 }
+
+@media screen and (orientation: landscape) {
+    .home {
+        .home-container {
+            .title {
+                font-size: clamp(5em, 12vw, 16em);
+                margin-bottom: 0.2em;
+                .title-span {
+                    display: none;
+                }
+            }
+            .subtitle {
+                font-size: clamp(2em, 6vw, 10em);
+                margin-bottom: 0.4em;
+                font-weight: 500;
+            }
+            .description {
+                font-size: clamp(1em, 4vw, 5em);
+                margin-bottom: 2em;
+                font-weight: 500;
+            }
+        }
+        .option-container {
+            display: none;
+        }
+    }
+}
