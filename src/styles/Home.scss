@@ -166,7 +166,7 @@
     }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 768px) {
     .home {
         .home-container {
             .title {
@@ -190,5 +190,11 @@
         .option-container {
             display: none;
         }
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 515px) {
+    .option-container {
+        display: none !important;
     }
 }
