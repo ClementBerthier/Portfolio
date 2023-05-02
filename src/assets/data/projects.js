@@ -5,7 +5,7 @@ export const projects = [
         path: "/images/projects/LePlacard.png",
         url: "https://github.com/ClementBerthier/LePlacard",
         description:
-            "LePlacard est un site web permettant à un joueur ou collectionneur de figurines Warhammer de visualiser facilement son stock, mais aussi de tenir à jour l'avancement des différents états de ses figurines (nettoyage, peinture, vernis, etc.). \n Ce projet est en cours de développement.",
+            "LePlacard est un site web permettant à un joueur ou collectionneur de figurines Warhammer de visualiser facilement son stock. Ce projet est en cours de développement.",
     },
     {
         id: 2,
