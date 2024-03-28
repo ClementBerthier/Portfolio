@@ -1,11 +1,12 @@
 export const data = [
     {
         id: 1,
-        date: "Juin 2023 - Octobre 2024",
-        description: "Alternance Concepteur/Développeur d'applications",
-        role: "Concepteur/Développeur d'applications",
+        date: "Octobre 2023",
+        description:
+            "Passage et optention du Titre Professionnel DWWM de niveau V  ",
+        role: "Optention du Titre Professionnel DWWM",
         school: "O'clock",
-        place: "Téléprésentiel & Entreprise",
+        place: "Rennes",
     },
     {
         id: 2,

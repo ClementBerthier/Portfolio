@@ -32,9 +32,8 @@ export const AboutMe = () => {
                 </div>
                 <div className="description">
                     <p>
-                        Je suis un développeur web à la recherche d'une
-                        alternance en tant que concepteur/développeur
-                        d'applications. Je suis passionné par les sciences et la
+                        Je suis un développeur web et web mobile Javascript
+                        Fullstack . Je suis passionné par les sciences et la
                         technologie, mais surtout curieux d'apprendre de
                         nouvelles choses. J'ai de l'expérience en Frontend et
                         Backend où j'ai pu travailler aussi bien en autonomie
